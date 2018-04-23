@@ -5,39 +5,33 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <title>Login</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      <title>Bill Preview</title>
    </head>
    <body>
       <div class="container text-left">
          <div class="row justify-content-center">
             <div class="col-lg-4">
                <div class="jumbotron" style="margin-top:150px">
-                  <center><h3>Please Login</h3></center>
-				  </br>
-                  <form method="post" name="login" action=" ">
+                  <h3>Bill Preview</h3>
+                  <form class="form-horizontal" role="form">
                      <div class="form-group">
-                        <label for="user_id">User ID</label>
-                        <input name="user_id" type="text" class="form-control"  id="user_id" placeholder="Enter ID" required>
-                     </div>
-                     <div class="form-group">
-                        <label for="pin">Pin</label>
-                        <input name="pin" type="password" class="form-control" id="pin" placeholder="Pin" required>
-                     </div>
 					 </br>
-                     <button type="submit" class="btn btn-primary form-control">Login</button>
+                        <center><h6>Some Tutoring Center</h6>
+						<h6>Address Line One</h6>
+						<h6>Phone Number</h6></center>
+                       <!--We need to figure out how we are pulling in the classes and the prices of each class a student is enrolled in -->
+                     </div>
+                     <br/>
+                     <div class="col-sm-offset-2 col-sm-8">
+                        <button type="submit" class="btn btn-primary form-control">Send A Copy</button>
+                        <button type="submit" class="btn btn-primary form-control">Refund</button>
+                     </div>
                   </form>
                </div>
             </div>
          </div>
       </div>
-	  
-	  <!-- If login is successful  -->
-	  
-	  
-	  <!-- If login not successful, redirect to loginWrong.html-->
-	  
-	  
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

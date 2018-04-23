@@ -9,12 +9,12 @@
       <title>Login</title>
    </head>
    <body>
-      <div class="container text-left">
+      <div class="container text-center">
          <div class="row justify-content-center">
             <div class="col-lg-4">
                <div class="jumbotron" style="margin-top:150px">
-                  <center><h3>Please Login</h3></center>
-				  </br>
+                  <h3>Please Login</h3>
+                  <font color="red"><small>Error: Login attempt failed.<br/> Please, try again.</small></font>
                   <form method="post" name="login" action=" ">
                      <div class="form-group">
                         <label for="user_id">User ID</label>
@@ -24,20 +24,12 @@
                         <label for="pin">Pin</label>
                         <input name="pin" type="password" class="form-control" id="pin" placeholder="Pin" required>
                      </div>
-					 </br>
                      <button type="submit" class="btn btn-primary form-control">Login</button>
                   </form>
                </div>
             </div>
          </div>
       </div>
-	  
-	  <!-- If login is successful  -->
-	  
-	  
-	  <!-- If login not successful, redirect to loginWrong.html-->
-	  
-	  
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
