@@ -7,7 +7,8 @@ if(!isset($_POST['submit']))
     loginForm($errorMessage);
 }
 //otherwise if submit is clicked, check if valid user
-//if valid user send them to the next page and if not, set error message and call function to display login form again.
+//if valid user send them to the next page
+//if not valid user, set error message and call function to display login form again with error message displayed.
 else
 {
   if (isset($_POST['username']) && isset($_POST['pw']))
@@ -27,7 +28,7 @@ else
       $stmt->store_result();
       $stmt->bind_result($username);
 
-      if ($stmt->num_rows >0 )
+      if ($stmt->num_rows > 0)
       {
       // if they are in the database register the user id
           session_start();

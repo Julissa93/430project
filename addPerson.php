@@ -9,9 +9,9 @@
       <title>Add Person</title>
    </head>
    <body>
-      <div class="container" style="max-width:600px;padding:40px 20px;background:#ebeff2">
-         <h3>Add Person</h3>
-         <form class="form-horizontal" role="form">
+      <div class="container" style="max-width:600px;padding:40px 20px;background:#ebeff2; ">
+         <h3 class = "text-center">Add Person</h3>
+         <form method = "post" class="form-horizontal" role="form" action = "add.php">
             <div class="form-group">
                <label for="firstName" class ="control-label col-sm-3">First name</label>
                <div class="col-sm-8">
@@ -22,24 +22,6 @@
                <label for="lastName" class ="control-label col-sm-3">Last Name</label>
                <div class="col-sm-8">
                   <input name ="last_name" type="text" class="form-control" id="lastName" placeholder="Last Name">
-               </div>
-            </div>
-            <div class="form-group">
-               <label for="id" class ="control-label col-sm-3">ID</label>
-               <div class="col-sm-8">
-                  <input name = "id" type="text" class="form-control" id="id" placeholder="Enter ID">
-               </div>
-            </div>
-            <div class="form-group">
-               <label for="dob" class ="control-label col-sm-3">DOB</label>
-               <div class="col-sm-8">
-                  <input name = "dob" type="date" class="form-control" id="dob">
-               </div>
-            </div>
-            <div class="form-group">
-               <label for="pin" class ="control-label col-sm-3">PIN</label>
-               <div class="col-sm-8">
-                  <input name = "pin" type="password" class="form-control" id="pin" placeholder="Enter PIN">
                </div>
             </div>
             <div class="form-group">
@@ -66,7 +48,7 @@
             </div>
             <br/>
             <div class="col-sm-offset-2 col-sm-8">
-               <button type="submit" class="btn btn-default">Add Person</button>
+               <button type='submit' class='btn btn-primary' name = 'submit'>Submit</button>
             </div>
          </form>
       </div>
