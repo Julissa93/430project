@@ -1,15 +1,14 @@
 <?php
 include('fcns.php');
-//if submit button is not clicked set the error message to null and just display login form
+
 if(!isset($_POST['submit']))
-{
-    $errorMessage = " ";
-    loginForm($errorMessage);
-}
-//otherwise if submit is clicked, check if valid user
-//if valid user send them to the next page and if not, set error message and call function to display login form again.
+    {
+        $errorMessage = " ";
+        loginForm($errorMessage);
+    }
 else
 {
+
   if (isset($_POST['username']) && isset($_POST['pw']))
   {
       $conn = connect();
@@ -32,21 +31,17 @@ else
       // if they are in the database register the user id
           session_start();
           $_SESSION['valid_user'] = $username;
-          //echo "Success betch!!!!!!!!!!!!sjlsdfgjlgsjblgf";
-          $stmt->free_result();
-          header('Location: yo.php');
-
+          echo "Success betch!!!!!!!!!!!!sjlsdfgjlgsjblgf";
+          header("Location:yo.php");
       }
       else
       {
-        $errorMessage = '<div class="alert alert-danger" role="alert">
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-        </div>';
         //echo "IT DOESNT WORK ";
-        loginForm($errorMessage);
+        loginForm("<br><span style = 'color: red; '>Wrong username/password </span>");
       }
 
      $stmt->free_result();
   }
 }
+
 ?>
