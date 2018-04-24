@@ -32,7 +32,7 @@ else
           session_start();
           $_SESSION['valid_user'] = $username;
           echo "Success betch!!!!!!!!!!!!sjlsdfgjlgsjblgf";
-          header("Location:yo.php");
+          header("Location:homepage.php");
       }
       else
       {

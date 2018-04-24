@@ -413,29 +413,29 @@
             <input id='person' name='person' type='radio'>
             <label for='person'>
                <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/dash.png'>
-               <span>Person</span>
+               <span>Users</span>
                <div class='lil_arrow'></div>
                <div class='bar'></div>
                <div class='swanky_wrapper__content'>
                   <ul>
-                     <li>Search</li>
-                     <li>Add</li>
-                     <li>Remove</li>
-                     <li>Modify</li>
+                     <li><a href = "searchPerson.php">Search</a></li>
+                     <li><a href = "addPerson.php">Add</a></li>
+                     <li>Edit</li>
+
                   </ul>
                </div>
             </label>
             <input id='student' name='student' type='radio'>
             <label for='student'>
                <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/del.png'>
-               <span>Student</span>
+               <span>Billing</span>
                <div class='lil_arrow'></div>
                <div class='bar'></div>
                <div class='swanky_wrapper__content'>
                   <ul>
-                     <li>Register</li>
-                     <li>Modify Registration</li>
-                     <li>Cancel Registration</li>
+                     <li>Search</li><!--search bill by id number-->
+                     <li><a href = "editBill.php">Edit</a></li>
+                     <li>Create</li> <!--create bill page needed-->
                   </ul>
                </div>
             </label>
@@ -447,11 +447,11 @@
                <div class='bar'></div>
                <div class='swanky_wrapper__content'>
                   <ul>
-                     <li>Grades</li>
-                     <li>Attendance</li>
+                     <li><a href = "submitTestResults.php">Grades</a></li>
+                     <li><a href = "submitAttendance.php">Attendance</a></li>
                   </ul>
                </div>
-			   
+
 			 </label>
                <input id='settings' radio='radio' type='radio'>
             <label for='settings'>
