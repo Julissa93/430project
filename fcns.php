@@ -1,10 +1,16 @@
 <?php
 function connect()
 {
-  $servername = "localhost";
+  /*$servername = "localhost";
   $username = "root";
   $password = "root";
-  $db = "tutoring_mgmt_sys";
+  $db = "tutoring_mgmt_sys";*/
+
+  $servername = "us-cdbr-iron-east-05.cleardb.net";
+  $username = "bb5158a7d2a4ed";
+  $password = "eec665f8";
+  $db = "heroku_2178f16907ca82a";
+  
   $result = new mysqli($servername, $username, $password, $db);
    if (mysqli_connect_errno())
    {
