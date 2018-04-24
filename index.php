@@ -35,7 +35,7 @@ else
           $_SESSION['valid_user'] = $username;
           //echo "Success betch!!!!!!!!!!!!sjlsdfgjlgsjblgf";
           $stmt->free_result();
-          header('Location: dashboard.php');
+          header('Location: homepage.php');
 
       }
       else
