@@ -31,7 +31,7 @@ else
       // if they are in the database register the user id
           session_start();
           $_SESSION['valid_user'] = $username;
-          header("Location:homepage.php");
+          header("Location:dashboard.php");
       }
       else
       {

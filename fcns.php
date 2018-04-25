@@ -10,7 +10,7 @@ function connect()
   $username = "bb5158a7d2a4ed";
   $password = "eec665f8";
   $db = "heroku_2178f16907ca82a";
-  
+
   $result = new mysqli($servername, $username, $password, $db);
    if (mysqli_connect_errno())
    {
@@ -34,6 +34,8 @@ function showHeader() //shows header html tags so you only have to call function
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
         <!-- Bootstrap CSS -->
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+        <link rel = 'stylesheet' href = 'style.css'>
+        <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>

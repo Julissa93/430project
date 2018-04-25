@@ -1,4 +1,4 @@
-<?php
+dashboard<?php
 include('fcns.php');
 //if submit button is not clicked set the error message to null and just display login form
 if(!isset($_POST['submit']))

@@ -37,7 +37,7 @@
             <div class="form-group">
                <label for="type" class ="control-label col-sm-3">Type of Person</label>
                <select id = "type" class="form-control" name="user_type" onchange = 'determineType(this.value);'>
-                  <option>Type of Person</option>
+                  <option style = "white-space: nowrap; ">Type of Person</option>
                   <option value="manager">Manager</option>
                   <option value="employee">Employee</option>
                   <option value = "student"> Student </option>
