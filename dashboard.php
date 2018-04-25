@@ -4,7 +4,7 @@ showHeader();
 <div class = "container">
   <div class = "row" style = "background-color: #262626; ">
     <div class = "col-12">
-      <?php echo "<h1> Hello, ."$_SESSION['valid_user']".</h1>"; ?>
+      <?php echo "<h1> Hello, ".$_SESSION['valid_user']."</h1>"; ?>
     </div>
   </div>
   <div class = "row">
