@@ -17,7 +17,7 @@ showHeader();
       <div class="sidenav" >
         <div class = "text-center text-primary"><i class="fas fa-graduation-cap fa-7x"></i></div>
         &nbsp;
-        <a href="searchPerson.php" id = "users"><i class="fas fa-user"></i> Users</a>
+        <a href="#users" id = "users"><i class="fas fa-user"></i> Users</a>
         <button class="dropdown-btn"><i class="fas fa-money-bill-alt"></i> Billing
           <i class="fa fa-caret-down"></i>
         </button>
@@ -40,7 +40,7 @@ showHeader();
     </div>
     <div class = "col-10">
       <!--Display different pages here using jQuery-->
-      <div class = "display">
+      <div id = "display">
       </div>
     </div>
   </div>
@@ -72,7 +72,7 @@ for (i = 0; i < dropdown.length; i++) {
 $(document).ready(function(){
     $("#users").click(function(){
       //$("searchPerson.php .container").show();
-      $(".display-page").show("searchPerson.php");
+      $("#display").load("/Applications/MAMP/htdocs/430project/searchPerson.php");
     });
 });
 
