@@ -29,7 +29,6 @@
                   <input type="text" class="form-control" id="search_user_id" placeholder="Search">
                </div>
             </div>
-            <br/>
             <div class="col-sm-offset-2 col-sm-8">
                <button type="submit" class="btn btn-default">Search</button>
             </div>
