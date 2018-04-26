@@ -10,18 +10,29 @@
    </head>
    <body>
      <div class = "container">
-        <h3 class = "text-center">Search</h3>
+        <h3 class = "text-center">Search By</h3>
         <form method = "post" action = "search.php" class="form-horizontal" role="form">
-           <div class="form-group">
-              <label for="search_user_id" class ="control-label col-sm-4">Enter the ID of the person you want to find:</label>
-              <div class="col-sm-8">
-                 <input type="text" class="form-control" id="search_user_id" name = "search" placeholder="Search">
-              </div>
-           </div>
-           <br/>
-           <div class="col-sm-offset-2 col-sm-8">
-              <button type='submit' class='btn btn-primary' name = 'submit'>Submit</button>
-           </div>
+            <div class="form-group">
+            <label for="search" class ="control-label col-sm-4">Search By:</label>
+            <select id = "search" class="form-control" name="search_by">
+               <option style = "white-space: nowrap; ">Search By</option>
+               <option value="first_name">First Name</option>
+               <option value="last_name">Last Name</option>
+               <option value = "id">ID</option>
+               <option value = "class">Class</option>
+               <option value = "location">Location</option>
+               <option value = "type">Type of Person</option>
+            </select>
+            <div class="col-sm-offset-2 col-sm-8">
+               <label for="search_user_id" class ="control-label col-sm-3"></label>
+               <div class="col-sm-8">
+                  <input type="text" class="form-control" id="search_user_id" placeholder="Search">
+               </div>
+            </div>
+            <br/>
+            <div class="col-sm-offset-2 col-sm-8">
+               <button type="submit" class="btn btn-default">Search</button>
+            </div>
         </form>
       </div>
       <!-- Optional JavaScript -->
