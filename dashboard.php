@@ -13,7 +13,7 @@
       <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-container" style = "background-color: #64F7B0">
-         <a href="">Add Person</a>
+         <a href="#addPerson" id = "addPerson">Add Person</a>
          <a href="#searchUsers" id = "searchUsers">Search Person</a>
          <a href="#">Remove Person</a>
       </div>
@@ -69,7 +69,15 @@
    $(document).ready(function(){
        $("#searchUsers").click(function(){
          $("#display").load("/430project/searchPerson.php");
+
        });
    });
+
+   $(document).ready(function(){
+     $('#addPerson').click(function(){
+       $('#display').load("/430project/addPerson.php");
+     });
+   });
+   
 </script>
 <?php showFooter();  ?>
