@@ -3,7 +3,7 @@
    include('fcns.php');
    showHeader();
    ?>
-<div class = "row d-flex align-items-center" style = "background-color: #64F7B0"; padding-right: 0 !important; margin-right: 0 !important;   ">
+<div class = "row d-flex align-items-center" style = "background-color: #64F7B0; padding-right: 0 !important; margin-right: 0 !important;   ">
 <div class = "col-2">
    <div class="sidenav"style = "background-color: #05B5BA">
       <div class = "text-center text-primary"><i class="fas fa-graduation-cap fa-7x" style = "background-color: #64F7B0"></i></div>
@@ -13,8 +13,8 @@
       <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-container" style = "background-color: #64F7B0">
-         <a href="addPerson.php">Add Person</a>
-         <a href="searchPerson.php">Search Person</a>
+         <a href="">Add Person</a>
+         <a href="#searchUsers" id = "searchUsers">Search Person</a>
          <a href="#">Remove Person</a>
       </div>
       <button class="dropdown-btn">Billing
@@ -43,7 +43,9 @@
       <button type = "button" class = "btn btn-primary float-left"  ><i class="fas fa-sign-out-alt"></i> Sign Out</button>
    </div>
 </div>
-<div class = "col-2">
+<div class = "col-10">
+  <div id = "display">
+  </div>
 </div>
 </div>
 <script>
@@ -65,9 +67,8 @@
 
 
    $(document).ready(function(){
-       $("#users").click(function(){
-         //$("searchPerson.php .container").show();
-         $("#display").load("/Applications/MAMP/htdocs/430project/searchPerson.php");
+       $("#searchUsers").click(function(){
+         $("#display").load("/430project/searchPerson.php");
        });
    });
 </script>

@@ -1,14 +1,11 @@
 <?php
-session_start();
+//session_start();
 include('fcns.php');
-if(isset($_POST['submit']))
-{
-  if(isset($_POST['search']))
-  {
+
+
     $conn = connect();
     $userid = trim($_POST['search']);
     $userid = htmlspecialchars($userid);
-
 
     $sql = "select name, location, type, username from user where user_id = $userid";
     $stmt = $conn->query($sql);
@@ -21,11 +18,11 @@ if(isset($_POST['submit']))
     {
       while($row = $stmt->fetch_assoc())
       {
-        showHeader();
+        //showHeader();
         echo"
         &nbsp;
           <div class = 'row d-flex justify-content-center'>
-            <div class = 'col-6 border rounded'>
+            <div class = 'col-10 border rounded'>
             <p class = 'text-center align-middle'>
               <img src = 'default-avatar.jpg' class = 'rounded-circle img-thumbnail float-left' height = '100px' width = '100px';>
               <strong>Name: </strong>".$row['name']."
@@ -34,17 +31,17 @@ if(isset($_POST['submit']))
             </div>
           </div>
         ";
-        showFooter();
+        //showFooter();
       }
     }
 
-  }
-  else
+
+  /*else
   {
       echo"<div class='alert alert-danger' role='alert'>
       <strong>Oh snap!</strong> Change a few things up and try submitting again.
       </div>";
-  }
-}
+  }*/
+
 
 ?>
