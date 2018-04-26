@@ -21,13 +21,25 @@ showHeader();
         </div>
 
         <div class = "row justify-content-center">
-          <div id = "showUsers">
+          <div class = "col-12" id = "showUsers">
 
           </div>
         </div>
       </div>
 
+
+
+
+<?php showFooter(); ?>
+
       <script>
+        /*$(document).ready(function(){
+            $("#searchButton").click(function(){
+              $("#showUsers").load("/430project/search.php");
+            });
+        });*/
+        //var id = $('search_user_id').val();
+        //$(function () {
 
         $('#theform').submit(function () {
 
@@ -40,14 +52,18 @@ showHeader();
             data: $('#theform').serialize(),
             success: function (data) {
               $("#showUsers").html(data)
+              console.log(data)
+
+
+
             }
           });
 
         });
 
+      //});
 
       </script>
-      <?php showFooter(); ?>
 
    </body>
 </html>

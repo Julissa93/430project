@@ -22,9 +22,9 @@ include('fcns.php');
         echo"
         &nbsp;
           <div class = 'row d-flex justify-content-center'>
-            <div class = 'col-10 border rounded'>
+            <div class = 'col-12'>
             <p class = 'text-center align-middle'>
-              <img src = 'default-avatar.jpg' class = 'rounded-circle img-thumbnail float-left' height = '100px' width = '100px';>
+
               <strong>Name: </strong>".$row['name']."
 
               <strong>User Type: </strong> ".$row['type']."</p>
