@@ -5,14 +5,14 @@
    ?>
 <div class = "row d-flex align-items-center" style = "background-color: #64F7B0; padding-right: 0 !important; margin-right: 0 !important;   ">
 <div class = "col-2">
-   <div class="sidenav"style = "background-color: #05B5BA">
-      <div class = "text-center text-primary"><i class="fas fa-graduation-cap fa-7x" style = "background-color: #64F7B0"></i></div>
+   <div class="sidenav"style = "background-color: #3a4651">
+      <div class = "text-center text-primary"><i class="fas fa-graduation-cap fa-7x" ></i></div>
       &nbsp;
       <?php echo "<h2 style = 'color: white; '> Hello, ".$_SESSION['valid_user']."</h2>"; ?>
       <button class="dropdown-btn" >Users
       <i class="fa fa-caret-down"></i>
       </button>
-      <div class="dropdown-container" style = "background-color: #64F7B0">
+      <div class="dropdown-container">
          <a href="#addPerson" id = "addPerson">Add Person</a>
          <a href="#searchUsers" id = "searchUsers">Search Person</a>
          <a href="#">Remove Person</a>
@@ -78,6 +78,6 @@
        $('#display').load("/430project/addPerson.php");
      });
    });
-   
+
 </script>
 <?php showFooter();  ?>

@@ -16,7 +16,7 @@
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
-  color: #818181;
+  color: #969696;
   display: block;
   border: none;
   background: none;
@@ -46,7 +46,7 @@
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
   display: none;
-  background-color: #262626;
+  background-color: #3a4651;
   padding-left: 8px;
 }
 

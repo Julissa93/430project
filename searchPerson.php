@@ -20,7 +20,7 @@ showHeader();
           </div>
         </div>
 
-        <div class = "row justify-content-center">
+        <div class = "row justify-content-center" style = "height: 100%; ">
           <div class = "col-12" id = "showUsers">
 
           </div>
@@ -52,10 +52,6 @@ showHeader();
             data: $('#theform').serialize(),
             success: function (data) {
               $("#showUsers").html(data)
-              console.log(data)
-
-
-
             }
           });
 
