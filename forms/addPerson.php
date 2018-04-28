@@ -2,48 +2,51 @@
 include('../db_functions/fcns.php');
 showHeader();
 ?>
-      <div class="container" style="max-width:600px;padding:40px 20px;background:#ebeff2; ">
+      <div class="container">
          <h3 class = "text-center">Add Person</h3>
-         <form method = "post" class="form-horizontal" role="form" action = "" id = "addPersonForm">
-            <div class="form-group">
-               <label for="firstName" class ="control-label col-sm-3">First name</label>
-               <div class="col-sm-8">
-                  <input name = "first_name" type="name" class="form-control" id="firstName" placeholder="First Name">
-               </div>
-            </div>
-            <div class="form-group">
-               <label for="lastName" class ="control-label col-sm-3">Last Name</label>
-               <div class="col-sm-8">
-                  <input name ="last_name" type="text" class="form-control" id="lastName" placeholder="Last Name">
-               </div>
-            </div>
-            <div class="form-group">
-               <label for="location" class ="control-label col-sm-3">Location</label>
-               <div class="col-sm-8">
-                  <select id = "location" class="form-control" name="location">
-                     <option value="location1">Location 1</option>
-                     <option value="location2">Location 2</option>
-                     <option value="location3">Location 3</option>
-                  </select>
-               </div>
-            </div>
-            <div class="form-group">
-               <label for="type" class ="control-label col-sm-3">Type of Person</label>
-               <select id = "type" class="form-control" name="user_type" onchange = 'determineType(this.value);'>
-                  <option style = "white-space: nowrap; ">Type of Person</option>
-                  <option value="manager">Admin</option>
-                  <option value="employee">Employee</option>
-               </select>
-            </div>
-            <div class="form-group">
-               <input type="email" style="display:none" class="form-control" id="email" placeholder="Enter email">
-            </div>
-            <br/>
-            <div class="col-sm-offset-2 col-sm-8">
-               <button type='submit' class='btn btn-primary' name = 'submit' id = "submit">Submit</button>
-            </div>
-         </form>
-      </div>
+         <div class = "row justify-content-center">
+           <div class = "col-6">
+           <form method = "post" class="form-horizontal" role="form" action = "" id = "addPersonForm">
+              <div class="form-group">
+                 <label for="firstName" class ="control-label">First name</label>
+
+                    <input name = "first_name" type="name" class="form-control" id="firstName" placeholder="First Name">
+
+              </div>
+              <div class="form-group">
+                 <label for="lastName" class ="control-label">Last Name</label>
+
+                    <input name ="last_name" type="text" class="form-control" id="lastName" placeholder="Last Name">
+
+              </div>
+              <div class="form-group">
+                 <label for="location" class ="control-label">Location</label>
+
+                    <select id = "location" class="form-control" name="location">
+                       <option value="location1">Location 1</option>
+                       <option value="location2">Location 2</option>
+                       <option value="location3">Location 3</option>
+                    </select>
+
+              </div>
+              <div class="form-group">
+                 <label for="type" class ="control-label">Type of Person</label>
+                 <select id = "type" class="form-control" name="user_type" onchange = 'determineType(this.value);'>
+                    <option style = "white-space: nowrap; ">Type of Person</option>
+                    <option value="manager">Admin</option>
+                    <option value="employee">Employee</option>
+                 </select>
+              </div>
+              <div class="form-group">
+                 <input type="email" style="display:none" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <br/>
+
+                 <button type='submit' class='btn btn-primary' name = 'submit' id = "submit">Submit</button>
+
+           </form>
+          </div>
+         </div>
       </div>
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -71,7 +74,6 @@ showHeader();
             url: '../db_functions/add.php',
             data: $('#addPersonForm').serialize(),
             success: function (data) {
-              alert("it works betch!");
               $("#display").html(data);
 
             }

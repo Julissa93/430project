@@ -5,9 +5,50 @@ showHeader();
       <div class="container text-left">
          <div class="row justify-content-center">
             <div class="col-lg-4">
-               <h3>Bill #1</h3>
+               <h3>Register Student</h3>
                <!--QUERY HERE! we need the bill number to auto generate-->
-               <form method="post" name="register" action="bill_preview.html">
+               <form method="post" name="register" action="">
+                 <div class = "form-group">
+                   <label for="user">Are you registering a new student?</label>
+                   <div class="input-group">
+                    <select class="custom-select" id="student_type" onchange="onSelectChange()">
+                      <option selected>Choose...</option>
+                      <option value="1">Yes</option>
+                      <option value="2">No</option>
+                    </select>
+                    <div class="input-group-append">
+                      <button id = "checkIfNewStudent"class="btn btn-outline-secondary" type="button">Submit</button>
+                    </div>
+                  </div>
+                 </div>
+
+                 <div class = "showmewhatyougot">
+                 </div>
+
+                 <div class = "form_part2">
+                   <div class = "form-group">
+                     <label for="first_name">First Name:</label>
+                     <input name="first_name" type="text" class="form-control" id="first_name" placeholder="First Name" required>
+                   </div>
+                   <div class = "form-group">
+                     <label for="last_name">Last Name:</label>
+                     <input name="last_name" type="text" class="form-control" id="last_name" placeholder="Last Name" required>
+                   </div>
+                   <div class = "form-group">
+                     <label for="email">Email:</label>
+                     <input name="email" type="text" class="form-control" id="email" placeholder="Email" required>
+                   </div>
+                   <div class="form-group">
+                      <label for="location" class ="control-label">Location</label>
+                         <select id = "location" class="form-control" name="location" onchange="">
+                            <option value="location1">Location 1</option>
+                            <option value="location2">Location 2</option>
+                            <option value="location3">Location 3</option>
+                         </select>
+                   </div>
+                 </div>
+
+                 <div class = "form_part3">
                   <div class="form-group">
                      <label for="user_id">Student ID</label>
                      <input name="user_id" type="text" class="form-control"  id="user_id" placeholder="Enter ID" required>
@@ -51,8 +92,30 @@ showHeader();
                      </div>
                   </fieldset>
                   <button type="submit" class="btn btn-primary form-control">Register</button>
+                </div>
                </form>
             </div>
          </div>
       </div>
 <?php showFooter(); ?>
+
+<script>
+  $(".form_part2").hide();
+  $(".form_part3").hide();
+
+  function onSelectChange()
+  {
+      if($("#student_type").val() ==  1)
+      {
+        $('.form_part2').show();
+        $('.form_part3').show();
+
+      }
+      else
+      {
+        $('.form_part2').hide();
+        $('.form_part3').show();
+      }
+  }
+
+</script>
