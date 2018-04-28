@@ -1,6 +1,6 @@
 <?php
-include('fcns.php');
-showHeader();  
+include('../db_functions/fcns.php');
+showHeader();
 ?>
       <div class="container" style="max-width:600px;padding:40px 20px;background:#ebeff2; ">
          <h3 class = "text-center">Add Person</h3>

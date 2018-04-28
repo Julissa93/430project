@@ -1,0 +1,87 @@
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #969696;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #3a4651;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/*div{border: 1px solid blue;}
+
+	a{border: 1px solid red;}
+
+	i{border: 1px solid green;}
+
+	span{border: 1px solid yellow;}
+
+	img{border: 1px solid pink;}
+
+	hr{border: 1px solid orange;}
+
+	p{border: 1px solid purple;}
+
+	ul{border: 1px solid gray;}
+
+	li{border: 1px solid teal;}
+
+	button{border: 1px solid brown;}
+
+	svg{border: 1px solid turquoise;}
+
+  form{border: 1px solid violet;}
+
+  h1{border: 1px solid darkgray;}
+
+  nav{border: 1px solid peach;}
+
+*/

@@ -1,12 +1,10 @@
 <?php
-include('fcns.php');
+include('../db_functions/fcns.php');
 showHeader();
 ?>
 
      <div class = "container">
         <h3 class = "text-center">Search</h3>
-
-
         <div class = "row justify-content-center">
           <div class = "col-8">
             <form method = "post" action = "" id="theform">
@@ -19,7 +17,6 @@ showHeader();
              </form>
           </div>
         </div>
-
         <div class = "row justify-content-center" style = "height: 100%; ">
           <div class = "col-12" id = "showUsers">
 
@@ -27,31 +24,19 @@ showHeader();
         </div>
       </div>
 
-
-
-
 <?php showFooter(); ?>
-
       <script>
-
         $('#theform').submit(function () {
-
           event.preventDefault();
-
-
           $.ajax({
             type: 'post',
-            url: 'search.php',
+            url: '../db_functions/search.php',
             data: $('#theform').serialize(),
             success: function (data) {
               $("#showUsers").html(data)
             }
           });
-
         });
-
-
       </script>
-
    </body>
 </html>

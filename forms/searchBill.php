@@ -1,5 +1,5 @@
 <?php
-include('fcns.php');
+include('../db_functions/fcns.php');
 showHeader();
 ?>
 

@@ -1,5 +1,5 @@
 <?php
-include('fcns.php');
+include('db_functions/fcns.php');
 //if submit button is not clicked set the error message to null and just display login form
 if(!isset($_POST['submit']))
 {
@@ -35,7 +35,7 @@ else
           $_SESSION['valid_user'] = $username;
           //echo "Success betch!!!!!!!!!!!!sjlsdfgjlgsjblgf";
           $stmt->free_result();
-          header('Location:dashboard.php');
+          header('Location:db_functions/dashboard.php');
 
       }
       else

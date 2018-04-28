@@ -10,18 +10,18 @@
         &nbsp;
         <?php echo "<h2 style = 'color: white; '> Hello, ".$_SESSION['valid_user']."</h2>"; ?>
         <button class="dropdown-btn" >Users
-        <i class="fa fa-caret-down"></i>
+          <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
            <a href="#addPerson" id = "addPerson">Add</a>
            <a href="#searchUsers" id = "searchUsers">Search</a>
            <a href="#">Edit</a>
         </div>
-        <button class = "dropdown-btn"> Register Student</button>
-        <button class="dropdown-btn">Billing
-        <i class="fa fa-caret-down"></i>
+        <button class="dropdown-btn">Register
+          <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container" >
+           <a href="#registerStudent" id = "registerStudent">Register Student</a>
            <a href="#searchBill" id = "searchBill">Search</a>
            <a href="#">Edit</a>
         </div>
@@ -68,28 +68,30 @@
 
    $(document).ready(function(){
        $("#searchUsers").click(function(){
-         $("#display").load("/430project/searchPerson.php");
+         $("#display").load("../forms/searchPerson.php");
 
        });
    });
 
    $(document).ready(function(){
      $('#addPerson').click(function(){
-       $('#display').load("/430project/addPerson.php");
+       $('#display').load("../forms/addPerson.php");
+     });
+   });
+
+   $(document).ready(function(){
+     $('#registerStudent').click(function(){
+       $('#display').load("../forms/register.php");
      });
    });
 
    $(document).ready(function(){
      $('#searchBill').click(function(){
-       $('#display').load("/430project/searchBill.php");
+       $('#display').load("../forms/searchBill.php");
      });
    });
 
-   $(document).ready(function(){
-     $('#searchBill').click(function(){
-       $('#display').load("/430project/searchBill.php");
-     });
-   });
+
 
 
 </script>

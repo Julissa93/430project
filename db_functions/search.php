@@ -1,6 +1,6 @@
 <?php
 //session_start();
-include('fcns.php');
+include('../db_functions/fcns.php');
 
 
     $conn = connect();
