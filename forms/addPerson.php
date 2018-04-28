@@ -4,7 +4,7 @@ showHeader();
 ?>
       <div class="container" style="max-width:600px;padding:40px 20px;background:#ebeff2; ">
          <h3 class = "text-center">Add Person</h3>
-         <form method = "post" class="form-horizontal" role="form" action = "add.php">
+         <form method = "post" class="form-horizontal" role="form" action = "" id = "addPersonForm">
             <div class="form-group">
                <label for="firstName" class ="control-label col-sm-3">First name</label>
                <div class="col-sm-8">
@@ -41,7 +41,7 @@ showHeader();
             </div>
             <br/>
             <div class="col-sm-offset-2 col-sm-8">
-               <button type='submit' class='btn btn-primary' name = 'submit'>Submit</button>
+               <button type='submit' class='btn btn-primary' name = 'submit' id = "submit">Submit</button>
             </div>
          </form>
       </div>
@@ -59,5 +59,24 @@ showHeader();
              email.style.display = "none";
           }
       }
+
+      /*$(document).ready(function(){
+        $('#submit').click(function(){
+          $('#display').load("../db_functions/add.php");
+        });
+      });*/
+        $('#addPersonForm').submit(function () {
+          event.preventDefault();
+          $.ajax({
+            type: 'post',
+            url: '../db_functions/add.php',
+            data: $('#addPersonForm').serialize(),
+            success: function (data) {
+              alert("it works betch!");
+              $("#display").html(data); 
+
+            }
+          });
+        });
    </script>
 </html>
