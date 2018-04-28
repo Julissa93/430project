@@ -31,9 +31,8 @@ showHeader();
                <label for="type" class ="control-label col-sm-3">Type of Person</label>
                <select id = "type" class="form-control" name="user_type" onchange = 'determineType(this.value);'>
                   <option style = "white-space: nowrap; ">Type of Person</option>
-                  <option value="manager">Manager</option>
+                  <option value="manager">Admin</option>
                   <option value="employee">Employee</option>
-                  <option value = "student"> Student </option>
                </select>
             </div>
             <div class="form-group">
@@ -73,7 +72,7 @@ showHeader();
             data: $('#addPersonForm').serialize(),
             success: function (data) {
               alert("it works betch!");
-              $("#display").html(data); 
+              $("#display").html(data);
 
             }
           });

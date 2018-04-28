@@ -9,7 +9,8 @@
         <div class = "text-center text-primary"><i class="fas fa-graduation-cap fa-7x" ></i></div>
         &nbsp;
         <?php echo "<h2 style = 'color: white; '> Hello, ".$_SESSION['valid_user']."</h2>"; ?>
-        <button class="dropdown-btn" >Users
+        <!-- EMPLOYEE SECTION SHOULD ONLY BE SEEN BY ADMINS-->
+        <button class="dropdown-btn" >Employees
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
@@ -17,14 +18,17 @@
            <a href="#searchUsers" id = "searchUsers">Search</a>
            <a href="#">Edit</a>
         </div>
-        <button class="dropdown-btn">Register
+
+        <!--STUDENT SECTION CAN BE SEEN BY ADMINS AND EMPLOYEES-->
+        <button class="dropdown-btn">Students
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container" >
-           <a href="#registerStudent" id = "registerStudent">Register Student</a>
+           <a href="#registerStudent" id = "registerStudent">Register</a>
            <a href="#searchBill" id = "searchBill">Search</a>
-           <a href="#">Edit</a>
+           <a href="#">Billing</a>
         </div>
+
         <button class="dropdown-btn">Submit
         <i class="fa fa-caret-down"></i>
         </button>

@@ -26,6 +26,9 @@ include('fcns.php');
       <div class = 'container'>
         <div class = 'row justify-content-center'>
           <div class = 'col-12'>
+            <div class="alert alert-success" role="alert">
+            <strong>".$name." added successfully!</strong>
+            </div>
             <p><strong>Name:</strong> ".$name."
             <br>
             <strong>Location:</strong> ".$location."
