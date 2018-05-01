@@ -24,8 +24,8 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container" >
-           <a href="#registerStudent" id = "registerStudent">Register</a>
-           <a href="#searchBill" id = "searchBill">Search</a>
+           <a href="#registerStudent" id = "registerStudent">Add Student</a>
+           <a href="#searchBill" id = "searchBill">Add Class</a>
            <a href="#">Billing</a>
         </div>
 

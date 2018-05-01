@@ -7,11 +7,11 @@ showHeader();
             <div class="col-lg-4">
                <h3>Register Student</h3>
                <!--QUERY HERE! we need the bill number to auto generate-->
-               <form method="post" name="register" action="">
+               <form method="post" name="register" action="../db_functions/registerStudentSql.php">
                  <div class = "form-group">
                    <label for="user">Are you registering a new student?</label>
                    <div class="input-group">
-                    <select class="custom-select" id="student_type" onchange="onSelectChange()">
+                    <select name = "student_type" class="custom-select" id="student_type" onchange="onSelectChange()">
                       <option selected>Choose...</option>
                       <option value="1">Yes</option>
                       <option value="2">No</option>
@@ -20,9 +20,6 @@ showHeader();
                       <button id = "checkIfNewStudent"class="btn btn-outline-secondary" type="button">Submit</button>
                     </div>
                   </div>
-                 </div>
-
-                 <div class = "showmewhatyougot">
                  </div>
 
                  <div class = "form_part2">
@@ -49,34 +46,30 @@ showHeader();
                  </div>
 
                  <div class = "form_part3">
-                  <div class="form-group">
-                     <label for="user_id">Student ID</label>
-                     <input name="user_id" type="text" class="form-control"  id="user_id" placeholder="Enter ID" required>
-                  </div>
                   <fieldset>
                      <legend>Classes the student will take this coming semester:</legend>
                      <div>
-                        <input type="checkbox" id="english" name="class" value="english">
+                        <input type="checkbox" id="english" name="class[]" value="english">
                         <label for="english">English</label>
                      </div>
                      <div>
-                        <input type="checkbox" id="math" name="class" value="math">
+                        <input type="checkbox" id="math" name="class[]" value="math">
                         <label for="math">Math</label>
                      </div>
                      <div>
-                        <input type="checkbox" id="writing" name="class" value="writing">
+                        <input type="checkbox" id="writing" name="class[]" value="writing">
                         <label for="writing">Writing</label>
                      </div>
                      <div>
-                        <input type="checkbox" id="shsat" name="class" value="shsat">
+                        <input type="checkbox" id="shsat" name="class[]" value="shsat">
                         <label for="shsat">SHSAT</label>
                      </div>
                      <div>
-                        <input type="checkbox" id="psat" name="class" value="psat">
+                        <input type="checkbox" id="psat" name="class[]" value="psat">
                         <label for="psat">PSAT</label>
                      </div>
                      <div>
-                        <input type="checkbox" id="sat" name="class" value="sat">
+                        <input type="checkbox" id="sat" name="class[]" value="sat">
                         <label for="sat">SAT</label>
                      </div>
                   </fieldset>
@@ -109,7 +102,6 @@ showHeader();
       {
         $('.form_part2').show();
         $('.form_part3').show();
-
       }
       else
       {
