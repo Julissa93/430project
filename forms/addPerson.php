@@ -1,55 +1,55 @@
 <?php
 include('../db_functions/fcns.php');
-showHeader();
 ?>
+<!doctype html>
+<html lang='en'>
+
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!------ Include the above in your HEAD tag ---------->
+      
+      <head>
+      <link href="http://cdn.materialdesignicons.com/2.1.99/css/materialdesignicons.min.css" rel="stylesheet" />
       <div class="container">
-         <h3 class = "text-center">Add Person</h3>
-         <div class = "row justify-content-center">
-           <div class = "col-6">
-           <form method = "post" class="form-horizontal" role="form" action = "" id = "addPersonForm">
-              <div class="form-group">
-                 <label for="firstName" class ="control-label">First name</label>
-
-                    <input name = "first_name" type="name" class="form-control" id="firstName" placeholder="First Name">
-
-              </div>
-              <div class="form-group">
-                 <label for="lastName" class ="control-label">Last Name</label>
-
-                    <input name ="last_name" type="text" class="form-control" id="lastName" placeholder="Last Name">
-
-              </div>
-              <div class="form-group">
-                 <label for="location" class ="control-label">Location</label>
-
-                    <select id = "location" class="form-control" name="location">
-                       <option value="location1">Location 1</option>
-                       <option value="location2">Location 2</option>
-                       <option value="location3">Location 3</option>
-                    </select>
-
-              </div>
-              <div class="form-group">
-                 <label for="type" class ="control-label">Type of Person</label>
-                 <select id = "type" class="form-control" name="user_type" onchange = 'determineType(this.value);'>
-                    <option style = "white-space: nowrap; ">Type of Person</option>
-                    <option value="manager">Admin</option>
-                    <option value="employee">Employee</option>
-                 </select>
-              </div>
-              <div class="form-group">
-                 <input type="email" style="display:none" class="form-control" id="email" placeholder="Enter email">
-              </div>
-              <br/>
-
-                 <button type='submit' class='btn btn-primary' name = 'submit' id = "submit">Submit</button>
-
-           </form>
-          </div>
+         <div class="row">
+            <div class="col-lg-4 col-md-4 mx-auto">
+               <div class="card">
+                  <div class="card-body">
+                     <form method = "post" class="form-horizontal" role="form" action = "" id = "addPersonForm">
+                        <div class="form-group">
+                           <label for="firstName" class ="control-label">First Name<span class="text-danger">*</span></label>
+                           <input name = "first_name" type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+                        </div>
+                        <div class="form-group">
+                           <label for="lastName" class ="control-label">Last Name <span class="text-danger">*</span></label>
+                           <input name ="last_name" type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                        </div>
+                        <div class="form-group">
+                           <label for="location" class ="control-label">Location <span class="text-danger">*</span></label>
+                           <select id = "location" class="form-control" name="location">
+                              <option value="location1">Location 1</option>
+                              <option value="location2">Location 2</option>
+                              <option value="location3">Location 3</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label for="type" class ="control-label">Type of Person<span class="text-danger">*</span></label>
+                           <select id = "type" class="form-control" name="user_type" onchange = 'determineType(this.value);'>
+                              <option style = "white-space: nowrap; ">Type of Person</option>
+                              <option value="manager">Admin</option>
+                              <option value="employee">Employee</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block" name = 'submit' id = "submit">Submit</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <?php showFooter(); ?>
    <script>
       function determineType(val) {
