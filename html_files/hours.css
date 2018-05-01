@@ -1,0 +1,39 @@
+.demo-bg{
+background: url(https://www.pierce.ctc.edu/sites/default/files/bp-writing-center-FSWC-1-Oct2016.jpg);
+margin-top: 60px;
+}
+.business-hours {
+background: black; 
+padding: 40px 14px;
+margin-top: -15px;
+position: relative;
+}
+.business-hours:before{
+content: '';
+width: 23px;
+height: 23px;
+background: blue;
+position: absolute;
+top: 5px;
+left: -12px;
+transform: rotate(-45deg);
+z-index: -1;
+}
+.business-hours .title {
+font-size: 20px;
+color: lightblue;
+text-transform: uppercase;
+padding-left: 5px;
+border-left: 4px solid #ffac0c; 
+}
+.business-hours li {
+color: lightblue;
+line-height: 30px;
+border-bottom: 1px solid #333; 
+}
+.business-hours li:last-child {
+border-bottom: none; 
+}
+.business-hours .opening-hours li.today {
+color: blue; 
+}
