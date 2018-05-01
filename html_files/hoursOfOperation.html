@@ -1,47 +1,44 @@
 <html>
-   <title>
-      Hours of Operation
-   </title>
-   <body>
-      <center>
-         </br>
-         </br>
-         <h1> Hours of Operation </h1>
-         <table
-            style="width:18%">
-            <tr align = "left">
-               <th>Day</th>
-               <th>Times</th>
-            </tr>
-            <tr>
-               <td>Monday</td>
-               <td>2:30PM - 5:30PM</td>
-            </tr>
-            <tr>
-               <td>Tuesday</td>
-               <td>2:30PM - 5:30PM</td>
-            </tr>
-            <tr>
-               <td>Wednesday</td>
-               <td>2:30PM - 5:30PM</td>
-            </tr>
-            <tr>
-               <td>Thursday</td>
-               <td>2:30PM - 5:30PM</td>
-            </tr>
-            <tr>
-               <td>Friday</td>
-               <td>2:30PM - 3:45PM</td>
-            </tr>
-            <tr>
-               <td>Saturday</td>
-               <td>10:00AM - 4:45PM</td>
-            </tr>
-            <tr>
-               <td>Sunday</td>
-               <td>10:00AM - 4:45PM</td>
-            </tr>
-         </table>
-      </center>
-   </body>
+   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+   <!------ Include the above in your HEAD tag ---------->
+   <!DOCTYPE html>
+   <html lang="">
+      <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+         <link rel="stylesheet" href="../html_files/hours.css" type="text/css" />
+      </head>
+      <body>
+         <div class="container demo-bg">
+            <div class="row">
+               <div class="col-sm-4"></div>
+               <div class="col-sm-4"></div>
+               <div class="col-sm-4">
+                  <div class="business-hours">
+                     <h2 class="title">Opening Hours</h2>
+                     <ul class="list-unstyled opening-hours">
+                        <li>Sunday <span class="pull-right">10:00AM - 4:45PM</span></li>
+                        <li>Monday <span class="pull-right">2:30PM - 5:30PM</span></li>
+                        <li>Tuesday <span class="pull-right">2:30PM - 5:30PM</span></li>
+                        <li>Wednesday <span class="pull-right">2:30PM - 5:30PM</span></li>
+                        <li>Thursday <span class="pull-right">2:30PM - 5:30PM</span></li>
+                        <li>Friday <span class="pull-right">2:30PM - 3:45PM</span></li>
+                        <li>Saturday <span class="pull-right">10:00AM - 4:45PM</span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </body>
+   </html>
+   <script>
+      // highlight current day on opeining hours
+      $(document).ready(function() {
+      $('.opening-hours li').eq(new Date().getDay()).addClass('today');
+      });
+   </script>
 </html>

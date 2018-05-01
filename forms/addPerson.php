@@ -42,6 +42,10 @@ include('../db_functions/fcns.php');
                            </select>
                         </div>
                         <div class="form-group">
+                           <label for="pin" class ="control-label">Password<span class="text-danger">*</span></label>
+                           <input name ="pin" type="password" class="form-control" id="pin" placeholder="Enter Password">
+                        </div>
+                        <div class="form-group">
                         </div>
                         <button type="submit" class="btn btn-success btn-block" name = 'submit' id = "submit">Submit</button>
                      </form>
