@@ -7,7 +7,7 @@ include('../db_functions/fcns.php');
     $userid = trim($_POST['search']);
     $userid = htmlspecialchars($userid);
 
-    $sql = "select name, location, type, username from user where user_id = $userid";
+    $sql = "select user_id, firstname, lastname, location, type from user where user_id = $userid";
     $stmt = $conn->query($sql);
     /*$stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $userid);
@@ -16,23 +16,25 @@ include('../db_functions/fcns.php');
 
     if($stmt->num_rows > 0)
     {
+
       while($row = $stmt->fetch_assoc())
       {
         //showHeader();
         echo"
-        &nbsp;
-          <div class = 'row d-flex justify-content-center'>
-            <div class = 'col-12'>
-            <p class = 'text-center align-middle'>
+              <td>".$row['user_id']."</td>
+              <td>".$row['firstname']."</td>
+              <td>".$row['lastname']."</td>
+              <td>".$row['location']."</td>
+              <td>".$row['type']."</td>
 
-              <strong>Name: </strong>".$row['name']."
-
-              <strong>User Type: </strong> ".$row['type']."</p>
-            </div>
-          </div>
         ";
         //showFooter();
       }
+
+    }
+    else
+    {
+      echo "No user with that ID"; # code...
     }
 
 

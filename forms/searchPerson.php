@@ -1,68 +1,55 @@
-<!DOCTYPE html>
-<html class=''>
-   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-   <!------ Include the above in your HEAD tag ---------->
+<?php include('../db_functions/fcns.php'); showHeader();?>
    <div class="container">
-      <div class="row">
-         <div class="col-md-3">
-            <form action="#" method="get">
+      <div class="row justify-content-center">
+         <div class="col-6">
+            <form action="" id = "theform" method="post">
+              <div class = "form-group">
+                <label for="search" class ="control-label">Search By:</label>
+                  <select id = "search" class="form-control" name="search_by">
+                     <option style = "white-space: nowrap; ">Search By</option>
+                     <option value="first_name">First Name</option>
+                     <option value="last_name">Last Name</option>
+                     <option value = "id">ID</option>
+                     <option value = "location">Location</option>
+                     <option value = "type"> Employee Type</option>
+                  </select>
+               </div>
                <div class="input-group">
                   <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
-                  <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
+                  <input type="text" class="form-control" id="search_user_id" name = "search" placeholder="Search" required>
                   <span class="input-group-btn">
-                  <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                    <button type='submit' id = "searchButton" class='btn btn-primary' name = 'submit'>Submit</button>
+
                   </span>
                </div>
             </form>
          </div>
-         <div class="col-md-9">
-            <table class="table table-list-search">
-               <thead>
+
+      </div>
+      <div class = "row justify-content-center">
+        <div class = "col-10">
+          &nbsp;
+                <table class = 'table'>
+                  <thead>
                   <tr>
-                     <th>Type of Person</th>
-                     <th> ID </th>
-                     <th>First Name</th>
-                     <th>Last Name </th>
-                     <th>Class</th>
-                     <th>Location</th>
+                    <th scope='col'>ID</th>
+                    <th scope='col'>First</th>
+                    <th scope='col'>Last</th>
+                    <th scope='col'>Location</th>
+                    <th scope='col'>Type</th>
                   </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td>Employee</td>
-                     <td>1</td>
-                     <td>Penny</td>
-                     <td>Jones</td>
-                     <td>123</td>
-                     <td>Location 1</td>
-                  </tr>
-                  <tr>
-                     <td>Student</td>
-                     <td>2</td>
-                     <td>Abigail</td>
-                     <td>Zitora</td>
-                     <td>126</td>
-                     <td>Location 2</td>
-                  </tr>
-                  <tr>
-                     <td>Employee</td>
-                     <td>3</td>
-                     <td>Marco</td>
-                     <td>Barten</td>
-                     <td>124</td>
-                     <td>Location 3</td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
+                </thead>
+                <tbody id = "showUsers">
+                </tbody>
+              </table>
+
+        </div>
       </div>
    </div>
    <script>
-      $(document).ready(function() {
+      /*$(document).ready(function() {
           var activeSystemClass = $('.list-group-item.active');
-      
+
           //something is entered in search form
           $('#system-search').keyup( function() {
              var that = this;
@@ -71,7 +58,7 @@
               var tableRowsClass = $('.table-list-search tbody tr');
               $('.search-sf').remove();
               tableRowsClass.each( function(i, val) {
-              
+
                   //Lower text for case insensitive
                   var rowText = $(val).text().toLowerCase();
                   var inputText = $(that).val().toLowerCase();
@@ -86,12 +73,12 @@
                   {
                       $('.search-query-sf').remove();
                   }
-      
+
                   if( rowText.indexOf( inputText ) == -1 )
                   {
                       //hide rows
                       tableRowsClass.eq(i).hide();
-                      
+
                   }
                   else
                   {
@@ -105,6 +92,29 @@
                   tableBody.append('<tr class="search-sf"><td class="text-muted" colspan="6">No entries found.</td></tr>');
               }
           });
-      });
+      });*/
+
+
+
+
+         $('#theform').submit(function () {
+
+           event.preventDefault();
+
+
+           $.ajax({
+             type: 'post',
+            url: 'search.php',
+            url: '../db_functions/search.php',
+             data: $('#theform').serialize(),
+             success: function (data) {
+               $("#showUsers").html(data)
+             }
+           });
+
+         });
+
+
+
    </script>
-</html>
+<?php showFooter();  ?>

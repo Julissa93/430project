@@ -92,4 +92,59 @@ function loginForm($errorMessage) //echos login form
 
     showFooter();
 }
+
+function showSideNav()
+{
+  echo"
+  <div class = 'row d-flex align-items-center'>
+    <div class = 'col-2'>
+       <div class='sidenav' style = 'background-color: #3a4651'>
+          <div class = 'text-center text-primary'><i class='fas fa-graduation-cap fa-7x' ></i></div>
+          &nbsp;
+
+
+          <h2 style = 'color: white; '> Hello, ".$_SESSION['valid_user']."</h2>
+
+
+          <!-- EMPLOYEE SECTION SHOULD ONLY BE SEEN BY ADMINS-->
+          <button class='dropdown-btn' >Employees
+            <i class='fa fa-caret-down'></i>
+          </button>
+          <div class='dropdown-container'>
+             <a href='#addPerson' id = 'addPerson'>Add</a>
+             <a href='#searchUsers' id = 'searchUsers'>Search</a>
+             <a href='#'>Edit</a>
+          </div>
+
+          <!--STUDENT SECTION CAN BE SEEN BY ADMINS AND EMPLOYEES-->
+          <button class='dropdown-btn'>Students
+            <i class='fa fa-caret-down'></i>
+          </button>
+          <div class='dropdown-container' >
+             <a href='#registerStudent' id = 'registerStudent'>Add Student</a>
+             <a href='#searchBill' id = 'searchBill'>Add Class</a>
+             <a href='#'>Billing</a>
+          </div>
+
+          <button class='dropdown-btn'>Submit
+          <i class='fa fa-caret-down'></i>
+          </button>
+          <div class='dropdown-container' >
+             <a href='#'>Attendance</a>
+             <a href='#'>Grades</a>
+          </div>
+          <button class='dropdown-btn'>Our Mission
+          <i class='fa fa-caret-down'></i>
+          </button>
+          <div class='dropdown-container' >
+             <a href='aboutUs.html'>About Us</a>
+             <a href='hoursOfOperation.html'>Hours of Operation</a>
+             <a href='classInfo.html'>This Semester</a>
+          </div>
+          <button type = 'button' class = 'btn btn-primary float-left'  ><i class='fas fa-sign-out-alt'></i> Sign Out</button>
+       </div>
+    </div>
+
+  ";
+}
 ?>

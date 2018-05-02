@@ -85,7 +85,7 @@
 
    $(document).ready(function(){
      $('#registerStudent').click(function(){
-       $('#display').load("../forms/register.php");
+       $('#display').load("../forms/add_student.php");
      });
    });
 
