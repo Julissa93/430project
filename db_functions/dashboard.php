@@ -40,7 +40,7 @@
         <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container" >
-           <a href="aboutUs.html">About Us</a>
+           <a href="#aboutUs" id="aboutUs">About Us</a>
            <a href="hoursOfOperation.html">Hours of Operation</a>
            <a href="classInfo.html">This Semester</a>
         </div>
@@ -94,7 +94,12 @@
        $('#display').load("../forms/register_for_classes.php");
      });
    });
-
+    
+    $(document).ready(function(){
+     $('#aboutUs').click(function(){
+       $('#display').load("../html_files/aboutUs.html");
+     });
+   });
 
 
 
