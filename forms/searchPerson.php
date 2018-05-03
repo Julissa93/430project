@@ -1,10 +1,12 @@
 <?php include('../db_functions/fcns.php'); showHeader();?>
-   <div class="container">
+  
+  
+   <div class="container" style="background-color:white; margin-top:60px">
       <div class="row justify-content-center">
          <div class="col-6">
             <form action="" id = "theform" method="post">
               <div class = "form-group">
-                <label for="search" class ="control-label">Search By:</label>
+                  <h3><label for="search" class ="control-label">Search By:</label></h3>
                   <select id = "search" class="form-control" name="search_by">
                      <option style = "white-space: nowrap; ">Search By</option>
                      <option value="first_name">First Name</option>
@@ -18,7 +20,7 @@
                   <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
                   <input type="text" class="form-control" id="search_user_id" name = "search" placeholder="Search" required>
                   <span class="input-group-btn">
-                    <button type='submit' id = "searchButton" class='btn btn-primary' name = 'submit'>Submit</button>
+                    <button type='submit' id = "searchButton" class='btn btn-primary' name = 'submit'> Submit</button>
 
                   </span>
                </div>
