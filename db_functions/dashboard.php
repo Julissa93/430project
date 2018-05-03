@@ -25,7 +25,7 @@
         </button>
         <div class="dropdown-container" >
            <a href="#registerStudent" id = "registerStudent">Add Student</a>
-           <a href="#searchBill" id = "searchBill">Add Class</a>
+           <a href="#addClass" id = "addClass">Add Class</a>
            <a href="#">Billing</a>
         </div>
 
@@ -90,8 +90,8 @@
    });
 
    $(document).ready(function(){
-     $('#searchBill').click(function(){
-       $('#display').load("../forms/searchBill.php");
+     $('#addClass').click(function(){
+       $('#display').load("../forms/register_for_classes.php");
      });
    });
 

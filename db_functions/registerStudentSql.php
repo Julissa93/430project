@@ -1,22 +1,43 @@
 <?php
 include('fcns.php');
 
-$conn = connect();
-//$studentType = $_POST['student_type'];
-
-/*if($studentType == 1) //if new student
+if(isset($_POST['add_class']))
 {
-  $firstname = $_POST['first_name'];
-  $lastname = $_POST['last_name'];
-  $location = $_POST['location'];
+  if(isset($_POST['student_id']) && isset($_POST['class']))
+  {
+    $studentid = trim($_POST['student_id']);
+    $studentid = htmlspecialchars($studentid);
+    $class_name = $_POST['class'];
+    $class_level = $_POST['level'];
 
+    echo sizeof($class_name);
+    echo " ";
+    echo sizeof($class_level);
 
-}*/
+    foreach($class_name as $class)
+    {
+      echo $class;
+      echo "<br>";
+    }
 
-$class = $_POST['class'];
-foreach($class as $class_section  )
+    foreach($class_level as $level)
+    {
+      echo $level;
+      echo "<br>"; 
+    }
+
+  }
+  else
+  {
+    echo"
+      <div class='alert alert-danger' role='alert'>
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </div>
+    ";
+  }
+}
+else
 {
-  echo $class_section;
-  echo "<br>";
+  Header('Location: ../forms/register_for_classes.php');
 }
 ?>
