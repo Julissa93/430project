@@ -71,7 +71,6 @@ include('../db_functions/fcns.php');
     
   <!-- We need to delete this code
 </html>
-
       <div class="container text-left">
          <div class="row justify-content-center">
             <div class="col-lg-4">
