@@ -7,7 +7,7 @@ include('../db_functions/fcns.php');
     $userid = trim($_POST['search']);
     $userid = htmlspecialchars($userid);
 
-    $sql = "select user_id, firstname, lastname, location, type from user where user_id = $userid";
+    $sql = "select user_id, firstname, lastname, location, type from user where user_id = '$userid'";
     $stmt = $conn->query($sql);
     /*$stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $userid);

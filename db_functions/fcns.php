@@ -1,16 +1,17 @@
 <?php
 function connect()
 {
+    
   $servername = "localhost";
   $username = "root";
   $password = "root";
   $db = "tutoring_mgmt_sys";
 
-/*  $servername = "us-cdbr-iron-east-05.cleardb.net";
+/*$servername = "us-cdbr-iron-east-05.cleardb.net";
   $username = "bb5158a7d2a4ed";
   $password = "eec665f8";
-  $db = "heroku_2178f16907ca82a";
-  */
+  $db = "heroku_2178f16907ca82a";*/
+
 
   $result = new mysqli($servername, $username, $password, $db);
    if (mysqli_connect_errno())
@@ -43,6 +44,17 @@ function showHeader() //shows header html tags so you only have to call function
         <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
 
+         <!--<style type='text/css'>
+        body {
+         background: url('https://images.pexels.com/photos/877695/pexels-photo-877695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+          -o-background-size: cover;
+        }
+
+        </style>-->
+
 
         <title>Login</title>
      </head>
@@ -61,6 +73,8 @@ function showFooter() //shows footer html tags so you only have to call function
 function loginForm($errorMessage) //echos login form
 {
   showHeader();
+
+
 
   echo"
     <div class='container'>
