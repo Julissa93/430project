@@ -43,6 +43,7 @@
            <a href="#aboutUs" id="aboutUs">About Us</a>
            <a href="hoursOfOperation.html">Hours of Operation</a>
            <a href="classInfo.html">This Semester</a>
+           <a href="contact_us.html">Contact Us</a>
         </div>
         <button type = "button" class = "btn btn-primary float-left"  ><i class="fas fa-sign-out-alt"></i> Sign Out</button>
      </div>
