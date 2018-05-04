@@ -39,6 +39,8 @@
                     <th scope='col'>Last</th>
                     <th scope='col'>Location</th>
                     <th scope='col'>Type</th>
+                    <th scope='col'>Edit Person</th>
+                    <th scope='col'>View Bill</th>
                   </tr>
                 </thead>
                 <tbody id = "showUsers">
