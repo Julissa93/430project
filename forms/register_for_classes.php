@@ -120,8 +120,9 @@ function checkCheckboxes()
 
 
 
-/*$('#myForm').submit(function(){
+$('#myForm').submit(function(){
   event.preventDefault();
+
     $.ajax({
       type:'post',
       url:'../db_functions/checkIfStudentExists.php',
@@ -137,7 +138,7 @@ function checkCheckboxes()
             success: function(data)
             {
               alert('Successfully added courses.');
-              $('.result').html("");
+              $('.result').html("Successfully added courses!!!!!");
 
             }
           });//end 2nd ajax

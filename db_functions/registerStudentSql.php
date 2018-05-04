@@ -1,10 +1,10 @@
 <?php
 include('fcns.php');
 showHeader();
-if(isset($_POST['add_class'])) //check is add class button is submitted
-{
-  if(isset($_POST['student_id']) && isset($_POST['class'])) //check if text boxes are filled in
-  {
+//if(isset($_POST['add_class'])) //check if add class button is submitted
+//{
+  //if(isset($_POST['student_id']) && isset($_POST['class'])) //check if text boxes are filled in
+  //{
     $conn = connect();
     $studentid = trim($_POST['student_id']);
     $studentid = htmlspecialchars($studentid);
@@ -61,7 +61,7 @@ if(isset($_POST['add_class'])) //check is add class button is submitted
     }
 
 
-  }
+  /*}
   else
   {
     echo"
@@ -70,11 +70,11 @@ if(isset($_POST['add_class'])) //check is add class button is submitted
       </div>
     ";
   }
-}
+/*}
 else
 {
   Header('Location: ../forms/register_for_classes.php');
-}
+}*/
 
 showFooter();
 ?>
