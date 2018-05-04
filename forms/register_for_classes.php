@@ -11,9 +11,10 @@ showHeader();
       <div class="card-body">
 
             <h3>Add Classes</h3>
+            <div class = "result">
+            </div>
 
-
-            <form method = "post" action = "../db_functions/registerStudentSql.php" id = "myForm" onsubmit="return checkCheckboxes(); ">
+            <form method = "post" action = "" id = "myForm" onsubmit="return checkCheckboxes(); ">
 
                <div class = "form-group">
                 <label for="id" class ="control-label">Enter Student ID:<span class="text-danger">*</span></label>
@@ -26,7 +27,7 @@ showHeader();
                  <div class = "d-inline">
                     <input type="checkbox" id="english" name="class[]" value="english">
                     <label for="english">English</label>
-                    <select name="level" >
+                    <select name="level[]" >
                       <option value="">Select Level</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -38,7 +39,7 @@ showHeader();
                  <div>
                     <input type="checkbox" id="math" name="class[]" value="math">
                     <label for="math">Math</label>
-                    <select name="level" >
+                    <select name="level[]" >
                       <option value="">Select Level</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -50,7 +51,7 @@ showHeader();
                  <div>
                     <input type="checkbox" id="writing" name="class[]" value="writing">
                     <label for="writing">Writing</label>
-                    <select name="level" >
+                    <select name="level[]" >
                       <option value="">Select Level</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -62,7 +63,7 @@ showHeader();
                  <div>
                     <input type="checkbox" id="shsat" name="class[]" value="shsat">
                     <label for="shsat">SHSAT</label>
-                    <select name="level" >
+                    <select name="level[]" >
                       <option value="">Select Day</option>
                       <option value="1">Saturday</option>
                       <option value="2">Sunday</option>
@@ -83,7 +84,7 @@ showHeader();
                  <div>
                     <input type="checkbox" id="sat" name="class[]" value="sat">
                     <label for="sat">SAT</label>
-                    <select name="level" >
+                    <select name="level[]" >
                       <option value="">Select Day</option>
                       <option value="1">Saturday</option>
                       <option value="2">Sunday</option>
@@ -104,7 +105,7 @@ function checkCheckboxes()
 {
 
   var atLeastOneIsChecked = $("input:checked").length;
-  console.log(atLeastOneIsChecked);
+
   if(atLeastOneIsChecked > 0)
   {
     return true;
@@ -116,6 +117,40 @@ function checkCheckboxes()
   }
 
 }
+
+
+
+/*$('#myForm').submit(function(){
+  event.preventDefault();
+    $.ajax({
+      type:'post',
+      url:'../db_functions/checkIfStudentExists.php',
+      data:$('#myForm').serialize(),
+      success: function(response)
+      {
+        if(response == "success")
+        {
+          $.ajax({
+            type:'post',
+            url:'../db_functions/registerStudentSql.php',
+            data:$('#myForm').serialize(),
+            success: function(data)
+            {
+              alert('Successfully added courses.');
+              $('.result').html("");
+
+            }
+          });//end 2nd ajax
+      }
+      else
+      {
+        alert('User does not exist.')
+      }
+    }
+
+    });//end 1st ajax
+
+});//end fcn.
 
 
 

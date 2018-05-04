@@ -1,6 +1,6 @@
 <?php include('../db_functions/fcns.php'); showHeader();?>
-  
-  
+
+
    <div class="container" style="background-color:white; margin-top:60px">
       <div class="row justify-content-center">
          <div class="col-6">
@@ -106,8 +106,7 @@
 
            $.ajax({
              type: 'post',
-            url: 'search.php',
-            url: '../db_functions/search.php',
+             url: '../db_functions/search.php',
              data: $('#theform').serialize(),
              success: function (data) {
                $("#showUsers").html(data)
