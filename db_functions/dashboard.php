@@ -45,7 +45,8 @@
            <a href="classInfo.html">This Semester</a>
            <a href="contact_us.html">Contact Us</a>
         </div>
-        <button type = "button" class = "btn btn-primary float-left"  ><i class="fas fa-sign-out-alt"></i> Sign Out</button>
+        <button type = "button" class = "btn btn-primary float-left"  ><i class="fas fa-sign-out-alt"></i> Sign Out</button><br><br>
+		  <button type = "button" class = "btn btn-primary float-left">Change Password</button>
      </div>
   </div>
 <div class = "col-10">
