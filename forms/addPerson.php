@@ -31,6 +31,11 @@ include('../db_functions/fcns.php');
                            <input name ="last_name" type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
                         </div>
                         
+                       <div class="form-group">
+                           <label for="userName" class ="control-label">User Name <span class="text-danger">*</span></label>
+                           <input name ="user_name" type="text" class="form-control" id="userName" placeholder="Enter User Name">
+                        </div>
+                       
                         <div class="form-group">
                            <label for="location" class ="control-label">Location <span class="text-danger">*</span></label>
                            <select id = "location" class="form-control" name="location">
