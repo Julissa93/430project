@@ -56,8 +56,6 @@ function showHeader() //shows header html tags so you only have to call function
 
         </style>-->
 
-
-        <title>Login</title>
      </head>
         <body>
         ";

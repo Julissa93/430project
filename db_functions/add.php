@@ -11,12 +11,17 @@ include('fcns.php');
     $lastname = htmlspecialchars($lastname);
     $location = $_POST['location'];
     $usertype = $_POST['user_type'];
+    $username = trim($_POST['user_name']);
+    $username = htmlspecialchars($username);
+    $password = trim($_POST['pin']);
+    $password = htmlspecialchars($password);
 
-    $sql = "insert into user (firstname, lastname, location, type) values (?, ?, ?, ?) ";
+    $sql = "insert into user (firstname, lastname, location, type, username, password) values (?, ?, ?, ?, ?, ?) ";
 
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss", $firstname, $lastname, $location, $usertype);
+    $stmt->bind_param("ssssss", $firstname, $lastname, $location, $usertype, $username, $password);
     $stmt->execute();
+
     if($stmt)
     {
       showHeader();
