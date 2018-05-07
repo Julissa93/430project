@@ -31,9 +31,11 @@ include('fcns.php');
         <div class = 'row justify-content-center'>
           <div class = 'col-12'>
             <div class='alert alert-success' role='alert'>
-            <strong>".$name." added successfully!</strong>
+            <strong>".$firstname." ".$lastname." added successfully!</strong>
             </div>
-            <p><strong>Name:</strong> ".$name."
+            <p><strong>First Name:</strong> ".$firstname."
+            <br>
+            <strong>Last Name:</strong> ".$lastname."
             <br>
             <strong>Location:</strong> ".$location."
             <br>
