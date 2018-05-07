@@ -31,6 +31,8 @@ include('../db_functions/fcns.php');
                           <th scope='col'>First</th>
                           <th scope='col'>Last</th>
                           <th scope='col'>Amount</th>
+                          <th scope='col'>Paid</th>
+                          <th scope='col'></th>
                         </tr>
                       </thead>
                       <tbody id = "showBills">
@@ -44,11 +46,32 @@ include('../db_functions/fcns.php');
         </div>
       </div>
 
+
+      <!-- Modal -->
+      <div class="modal fade" id="billModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModal3Label">Pay Bill</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body" id = 'billstuff'>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 <script>
 $('#theform').submit(function () {
-
   event.preventDefault();
-
 
   $.ajax({
     type: 'post',
@@ -60,4 +83,21 @@ $('#theform').submit(function () {
   });
 
 });
+
+function getBillInfo(bill_id)
+{
+  var bill = $(bill_id).find('input[name=bill_id]').val();
+
+
+    $.ajax({
+      type: 'post',
+      url: '../db_functions/displayBillSql.php',
+      data: { billid : bill },
+      success: function (data) {
+        $("#billstuff").html(data);
+        $('#billModal').modal('toggle');
+      }
+    });
+
+}
 </script>
