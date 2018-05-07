@@ -57,6 +57,7 @@ include('../db_functions/fcns.php');
                 <span aria-hidden="true">×</span>
               </button>
             </div>
+            <div id = "notificationBox2"></div>
             <div class="modal-body" id = 'billstuff'>
 
 
@@ -98,6 +99,19 @@ function getBillInfo(bill_id)
         $('#billModal').modal('toggle');
       }
     });
+}
 
+function payBill()
+{
+  alert('success');
+    $("#notificationBox2").html("<div class='alert alert-success'><strong>Success! </strong>Bill has been paid.</div>");
+
+
+  setTimeout(function(){
+                $("#notificationBox2").fadeOut(2500, function(){
+                    $("#notificationBox2").html("");
+                    $("#notificationBox2").show();
+                });
+              }, 3000);
 }
 </script>
