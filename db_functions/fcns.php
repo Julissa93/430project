@@ -66,6 +66,7 @@ function showHeader() //shows header html tags so you only have to call function
 function showFooter() //shows footer html tags so you only have to call function instead of copying and pasting code again.
 {
   echo"
+  <div id='notificationBox'></div>
   </body>
 </html>
   ";

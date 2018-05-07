@@ -2,9 +2,7 @@
 include('../db_functions/fcns.php');
 ?>
 
-
 <div class="row align-items-center justify-content-center" style="margin-top:60px">
-
  <div class="col-lg-4 col-md-4 mx-auto">
     <div class="card">
       <div class="card-body">
@@ -97,7 +95,10 @@ include('../db_functions/fcns.php');
         </div>
      </div>
     </div>
+
 </div>
+
+
 <script>
 
 function checkCheckboxes()
@@ -119,7 +120,7 @@ function checkCheckboxes()
 
 
 
-/*$('#myForm').submit(function(){
+$('#myForm').submit(function(){
   event.preventDefault();
 
     $.ajax({
@@ -128,19 +129,42 @@ function checkCheckboxes()
       data:$('#myForm').serialize(),
       success: function(response)
       {
-        if(response == "success")
+        if(response)
         {
+
           $.ajax({
             type:'post',
             url:'../db_functions/registerStudentSql.php',
             data:$('#myForm').serialize(),
             success: function(data)
             {
-              alert('Successfully added courses.');
-              $('.result').html("Successfully added courses!!!!!");
+              $.LoadingOverlay("show", {
+                image       : "",
+                background:"rgba(13, 13, 13, 0.8)",
+                fontawesomeColor        : "#f2f2f2",
+                fontawesomeAnimation: "1000ms rotate_right",
+                fontawesome : "fa fa-sync-alt ",
+                fontawesomeResizeFactor: 0.5,
+              });
 
+              setTimeout(function(){
+                  $.LoadingOverlay("hide");
+              }, 1500);
+
+              setTimeout(function(){
+                $("#notificationBox").html("<div class='alert alert-success'><strong>Success! </strong>Class has been added to Database</div>");
+              }, 1600);
+
+              setTimeout(function(){
+                $("#notificationBox").fadeOut(2500, function(){
+                    $("#notificationBox").html("");
+                    $("#notificationBox").show();
+                });
+              }, 3000);
+              
             }
           });//end 2nd ajax
+
       }
       else
       {
