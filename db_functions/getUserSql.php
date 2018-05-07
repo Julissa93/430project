@@ -16,24 +16,24 @@ include('../db_functions/fcns.php');
       while($row = $stmt->fetch_assoc())
       {
         echo "
-          <div class='container' style='background-color:white; margin-top:60px'>
-
-           <div class='row justify-content-center'>
-             <div class = 'card'>
-              <div class='col-12'>
-                <strong>Employee ID: </strong> ".$row['user_id']."
-                <br>
-                <strong> First Name </strong> ".$row['firstname']."
-                <br>
-                <strong>Last Name</strong> ".$row['lastname']."
-                <br>
-                <strong>Location: </strong> ".$row['location']."
-                <br>
-                <strong>Employee Type: </strong> ".$row['type']."
-              </div>
-            </div>
-            </div>
+        <form>
+          <div class='form-group'>
+            <label for='firstname'>First Name</label>
+            <input type='text' class='form-control' id='firstname' placeholder='First Name' value='".$row['firstname']."'>
           </div>
+          <div class='form-group'>
+            <label for='lastname'>Last Name</label>
+            <input type='text' class='form-control' id='lastname' placeholder='Last Name' value='".$row['lastname']."'>
+          </div>
+          <div class='form-group'>
+            <label for='location'>location</label>
+            <input type='text' class='form-control' id='location' placeholder='Location' value='".$row['location']."'>
+          </div>
+          <div class='form-group'>
+            <label for='usertype'>Type</label>
+            <input type='text' class='form-control' id='usertype' placeholder='Type' value='".$row['type']."'>
+          </div>
+        </form>
         ";
       }
     }

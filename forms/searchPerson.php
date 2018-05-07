@@ -39,6 +39,7 @@
                     <th scope='col'>Last</th>
                     <th scope='col'>Location</th>
                     <th scope='col'>Type</th>
+                    <th scope='col'></th>
                   </tr>
                 </thead>
                 <tbody id = "showUsers">
@@ -48,6 +49,27 @@
         </div>
       </div>
    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
    <script>
 
       /*$(document).ready(function() {
@@ -128,7 +150,9 @@ function getUser(id)
              data: { user_id : user },
              success: function(data)
              {
-               $('#display').html(data);
+
+               $('#modalBody').html(data);
+               $('#editUserModal').modal('toggle');
              }
 
            });
