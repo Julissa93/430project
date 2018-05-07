@@ -4,38 +4,35 @@ include('../db_functions/fcns.php');
      <!doctype html>
 <html lang='en'>
 
-   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <!------ Include the above in your HEAD tag ---------->
-      
+
       <head>
-      <link href="http://cdn.materialdesignicons.com/2.1.99/css/materialdesignicons.min.css" rel="stylesheet" />
+      <link href="https://cdn.materialdesignicons.com/2.1.99/css/materialdesignicons.min.css" rel="stylesheet" />
 
          <div class="row align-items-center justify-content-center" style="margin-top:60px">
-       
+
             <div class="col-lg-4 col-md-4 mx-auto">
                <div class="card">
-                  <div class="card-body">                  
+                  <div class="card-body">
                   <h3>Register Student</h3>
-                   
+
                     <form method = "post" action="../db_functions/addNewStudentSql.php">
-                       
+
                         <div class="form-group">
                            <label for="first_name" class ="control-label">First Name<span class="text-danger">*</span></label>
                            <input name = "first_name" type="text" class="form-control" id="first_name" placeholder="Enter First Name" required>
                         </div>
-                        
+
                         <div class="form-group">
                            <label for="last_name" class ="control-label">Last Name <span class="text-danger">*</span></label>
                            <input name ="last_name" type="text" class="form-control" id="last_name" placeholder="Enter Last Name">
                         </div>
-                        
+
                         <div class="form-group">
                            <label for="email" class ="control-label">Email <span class="text-danger">*</span></label>
                            <input name ="email" type="email" class="form-control" id="email" placeholder="Email" required>
                         </div>
-                        
+
                         <div class="form-group">
                            <label for="location" class ="control-label">Location <span class="text-danger">*</span></label>
                            <select id = "location" class="form-control" name="location">
@@ -44,7 +41,7 @@ include('../db_functions/fcns.php');
                               <option value="location3">Location 3</option>
                            </select>
                         </div>
-                        
+
                         <fieldset>
                           <legend>Want the lunch package? </legend>
                           <div>
@@ -57,18 +54,18 @@ include('../db_functions/fcns.php');
                           </div>
                       </fieldset>
 
-                                                                   
+
                         <button type="submit" class="btn btn-primary btn-block" name = 'submit' id = "submit">Submit</button>
-                        
+
                      </form>
                   </div>
                </div>
             </div>
          </div>
       </div>
-            
+
     <?php showFooter(); ?>
-    
+
   <!-- We need to delete this code
 </html>
       <div class="container text-left">

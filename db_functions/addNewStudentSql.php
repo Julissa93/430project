@@ -1,7 +1,7 @@
 <?php
-session_start(); 
+session_start();
 include('fcns.php');
-if(isset($_POST['add_student']))
+if(isset($_POST['submit']))
 {
   if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['location']) && isset($_POST['lunch']))
   {
