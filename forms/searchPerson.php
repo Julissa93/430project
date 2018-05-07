@@ -50,6 +50,7 @@
       </div>
    </div>
 
+
 <!-- Modal -->
 <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -65,7 +66,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" onClick="edit_user()">Save changes</button>
       </div>
     </div>
   </div>
@@ -157,6 +158,26 @@ function getUser(id)
 
            });
          //});
+}
+
+function edit_user()
+{
+  $.ajax({
+    type: 'post',
+    url: '../db_functions/editUserSql.php',
+    data: $('#get_user_form').serialize(),
+    success: function(data)
+    {
+      $('#editUserModal').modal('toggle');
+      $("#notificationBox").html("<div class='alert alert-success'><strong>Success! </strong>User has been updated.</div>");
+      setTimeout(function(){
+        $("#notificationBox").fadeOut(2500, function(){
+            $("#notificationBox").html("");
+            $("#notificationBox").show();
+        });
+      }, 3000);
+    }
+  });
 }
 
    </script>
