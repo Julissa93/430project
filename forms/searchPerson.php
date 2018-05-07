@@ -7,11 +7,11 @@
             <form action="" id = "theform" method="post">
               <div class = "form-group">
                   <h3><label for="search" class ="control-label">Search By:</label></h3>
-                  <select id = "search" class="form-control" name="search_by">
+                  <select id = "search" class="form-control" name="search_by" required>
                      <option style = "white-space: nowrap; ">Search By</option>
-                     <option value="first_name">First Name</option>
-                     <option value="last_name">Last Name</option>
-                     <option value = "id">ID</option>
+                     <option value="firstname">First Name</option>
+                     <option value="lastname">Last Name</option>
+                     <option value = "user_id">ID</option>
                      <option value = "location">Location</option>
                      <option value = "type"> Employee Type</option>
                   </select>
@@ -31,7 +31,7 @@
       <div class = "row justify-content-center">
         <div class = "col-10">
           &nbsp;
-                <table class = 'table'>
+                <table class = 'table table-hover'>
                   <thead>
                   <tr>
                     <th scope='col'>ID</th>
@@ -39,8 +39,6 @@
                     <th scope='col'>Last</th>
                     <th scope='col'>Location</th>
                     <th scope='col'>Type</th>
-                    <th scope='col'>Edit Person</th>
-                    <th scope='col'>View Bill</th>
                   </tr>
                 </thead>
                 <tbody id = "showUsers">

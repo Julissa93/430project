@@ -20,20 +20,20 @@ include('../db_functions/fcns.php');
         </div>
 
         <div class = "row justify-content-center" style = "height: 100%; ">
-          <div class = "col-10" id = "showBills">
+          <div class = "col-10" id = "">
 
 
                 &nbsp;
-                      <table class = 'table'>
+                      <table class = 'table table-hover'>
                         <thead>
                         <tr>
                           <th scope='col'>Bill ID</th>
                           <th scope='col'>First</th>
                           <th scope='col'>Last</th>
-                          <th scope='col'>View Bill</th>
+                          <th scope='col'>Amount</th>
                         </tr>
                       </thead>
-                      <tbody id = "showUsers">
+                      <tbody id = "showBills">
                       </tbody>
                     </table>
 
