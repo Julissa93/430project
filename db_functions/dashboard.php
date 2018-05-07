@@ -33,8 +33,8 @@
         <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container" >
-           <a href="#">Attendance</a>
-           <a href="#">Grades</a>
+           <a href="#attendance" id = "attendance">Attendance</a>
+           <a href="#grades" id = "grades">Grades</a>
         </div>
         <button class="dropdown-btn">Our Mission
         <i class="fa fa-caret-down"></i>
@@ -108,6 +108,18 @@
        $('#display').load("../html_files/aboutUs.html");
      });
    });
+
+   $(document).ready(function(){
+    $('#attendance').click(function(){
+      $('#display').load("../forms/submitAttendance.php");
+    });
+  });
+
+  $(document).ready(function(){
+   $('#grades').click(function(){
+     $('#display').load("../forms/submitTestResults.php");
+   });
+ });
 
 
 
