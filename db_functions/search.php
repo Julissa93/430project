@@ -22,13 +22,18 @@ include('../db_functions/fcns.php');
       {
         //showHeader();
         echo"
-        <tr>
-              <td>".$row['user_id']."</td>
-              <td>".$row['firstname']."</td>
-              <td>".$row['lastname']."</td>
-              <td>".$row['location']."</td>
-              <td>".$row['type']."</td>
-              </tr>
+        <form input = 'post'>
+          <tr class = 'user_row_form'>
+            <td>".$row['user_id']."</td>
+            <td>".$row['firstname']."</td>
+            <td>".$row['lastname']."</td>
+            <td>".$row['location']."</td>
+            <td>".$row['type']."</td>
+            <button type = 'button' onClick = 'getUser(this)' >
+            <input type = 'hidden' name = 'user_id' value = ".$row['user_id'].">
+            More...</button>
+          </tr>
+        </form>
         ";
         //showFooter();
       }

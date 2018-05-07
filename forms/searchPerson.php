@@ -49,6 +49,7 @@
       </div>
    </div>
    <script>
+
       /*$(document).ready(function() {
           var activeSystemClass = $('.list-group-item.active');
 
@@ -116,5 +117,22 @@
          });
 
 
+function getUser(id)
+{
+         //$('.user_row_form').click( function(){
+         var user = $(id).find('input[name=user_id]').val();
+           //alert(user);
+           $.ajax({
+             type: 'post',
+             url: '../db_functions/getUserSql.php',
+             data: { user_id : user },
+             success: function(data)
+             {
+               $('#display').html(data);
+             }
+
+           });
+         //});
+}
 
    </script>
