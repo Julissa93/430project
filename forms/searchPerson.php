@@ -1,4 +1,4 @@
-<?php include('../db_functions/fcns.php'); showHeader();?>
+<?php include('../db_functions/fcns.php'); ?>
 
 
    <div class="container" style="background-color:white; margin-top:60px">
@@ -120,4 +120,3 @@
 
 
    </script>
-<?php showFooter();  ?>

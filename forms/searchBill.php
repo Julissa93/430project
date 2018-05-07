@@ -1,6 +1,5 @@
 <?php
 include('../db_functions/fcns.php');
-showHeader();
 ?>
 
      <div class = "container">
@@ -11,7 +10,7 @@ showHeader();
           <div class = "col-8">
             <form method = "post" action = "" id="theform">
                <div class="form-group" >
-                  <label for="search_user_id" class ="control-label">Enter the ID of the bill you want to find:</label>
+                  <label for="search_user_id" class ="control-label">Enter user ID:</label>
                   <br>
                   <input type="text" class="form-control" id="search_bill_id" name = "search" placeholder="Search">
                </div>
@@ -21,16 +20,30 @@ showHeader();
         </div>
 
         <div class = "row justify-content-center" style = "height: 100%; ">
-          <div class = "col-12" id = "showBills">
+          <div class = "col-10" id = "showBills">
+
+
+                &nbsp;
+                      <table class = 'table'>
+                        <thead>
+                        <tr>
+                          <th scope='col'>Bill ID</th>
+                          <th scope='col'>First</th>
+                          <th scope='col'>Last</th>
+                          <th scope='col'>View Bill</th>
+                        </tr>
+                      </thead>
+                      <tbody id = "showUsers">
+                      </tbody>
+                    </table>
+
+
+
 
           </div>
         </div>
       </div>
 
-
-
-
-<?php showFooter(); ?>
 <script>
 $('#theform').submit(function () {
 

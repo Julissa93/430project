@@ -1,6 +1,5 @@
 <?php
 include('../db_functions/fcns.php');
-showHeader();
 ?>
 
 
@@ -14,7 +13,7 @@ showHeader();
             <div class = "result">
             </div>
 
-            <form method = "post" action = "" id = "myForm" onsubmit="return checkCheckboxes(); ">
+            <form method = "post" action = "../db_functions/registerStudentSql.php" id = "myForm" onsubmit="return checkCheckboxes(); ">
 
                <div class = "form-group">
                 <label for="id" class ="control-label">Enter Student ID:<span class="text-danger">*</span></label>
@@ -120,7 +119,7 @@ function checkCheckboxes()
 
 
 
-$('#myForm').submit(function(){
+/*$('#myForm').submit(function(){
   event.preventDefault();
 
     $.ajax({
@@ -156,4 +155,3 @@ $('#myForm').submit(function(){
 
 
 </script>
-<?php showFooter(); ?>

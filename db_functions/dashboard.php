@@ -26,7 +26,7 @@
         <div class="dropdown-container" >
            <a href="#registerStudent" id = "registerStudent">Add Student</a>
            <a href="#addClass" id = "addClass">Add Class</a>
-           <a href="#">Billing</a>
+           <a href="#bills" id = "bills">Billing</a>
         </div>
 
         <button class="dropdown-btn">Submit
@@ -96,7 +96,13 @@
        $('#display').load("../forms/register_for_classes.php");
      });
    });
-    
+
+   $(document).ready(function(){
+     $('#bills').click(function(){
+       $('#display').load("../forms/searchBill.php");
+     });
+   });
+
     $(document).ready(function(){
      $('#aboutUs').click(function(){
        $('#display').load("../html_files/aboutUs.html");
