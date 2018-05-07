@@ -1,4 +1,9 @@
+.table-hover > tbody > tr:hover {
+  background-color: #D2D2D2 !important;
 
+ cursor: pointer;
+
+}
 .sidenav {
   height: 100%;
   width: 200px;

@@ -6,8 +6,9 @@ include('../db_functions/fcns.php');
     $conn = connect();
     $userid = trim($_POST['search']);
     $userid = htmlspecialchars($userid);
+    $select_by = $_POST['search_by'];
 
-    $sql = "select user_id, firstname, lastname, location, type from user where user_id = '$userid'";
+    $sql = "select user_id, firstname, lastname, location, type from user where $select_by = '$userid'";
     $stmt = $conn->query($sql);
     /*$stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $userid);
@@ -21,12 +22,13 @@ include('../db_functions/fcns.php');
       {
         //showHeader();
         echo"
+        <tr>
               <td>".$row['user_id']."</td>
               <td>".$row['firstname']."</td>
               <td>".$row['lastname']."</td>
               <td>".$row['location']."</td>
               <td>".$row['type']."</td>
-
+              </tr>
         ";
         //showFooter();
       }
