@@ -72,15 +72,9 @@ function showFooter() //shows footer html tags so you only have to call function
 
 function loginForm($errorMessage) //echos login form
 {
-     echo' <html>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-<head>
-     <link rel="stylesheet" href="style/style.css" type="text/css" />
-   </head>
-   
+  showHeader(); 
+     echo'
+
     <body class="background_LogIn">
         <div class="container" style="margin-top:100px">
     	<div class="row">
@@ -103,7 +97,7 @@ function loginForm($errorMessage) //echos login form
 											<div class="input-group">
 												<span class="input-group-addon">
 													<i class="glyphicon glyphicon-user"></i>
-												</span> 
+												</span>
 												<input class="form-control" placeholder="Username" id="user_id" name="username" type="text" required autofocus>
 											</div>
 										</div>
@@ -132,7 +126,7 @@ function loginForm($errorMessage) //echos login form
 		</div>
 	</div>
     </body>
-   
+
 </html>';
 }
 
