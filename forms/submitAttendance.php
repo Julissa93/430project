@@ -10,7 +10,7 @@
    </head>
    <body data-spy="scroll" data-target=".navbar" data-offset="50">
      <div class = "section1">
-      <h3><label for="grade" class ="control-label">Please Select a class to submit grades: </label></h3>
+      <h3><label for="grade" class ="control-label">Please select a class to submit attendance: </label></h3>
       <select id = "grade" class="form-control" name="grade" onchange="reveal_options()">
          <option style = "white-space: nowrap; ">Select Class</option>
          <option value="Writing">Writing</option>

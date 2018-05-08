@@ -86,8 +86,11 @@
     <li class="widget">
          <h3 class="widget-title"><span class="widget-inner">Contact Us</span></h3>
 
-      <div class="widget-contents">123 main streeet.</br>Anytown, USA 12345</br>1.555.123.4567 </br>
-Details: <a href="http://liquidbook.com/2014/08/adding-icon-wordpress-widget-title/" target="_blank">liquidbook.com</a>
+      <div class="widget-contents">H.O.P.E<br>
+2700 Sand Hill Rd<br>
+Menlo Park, CA 94025<br>
+<br>
+Details: <a href="#" target="_blank">Hope.com</a>
 </div>
     </li>
 </ul>
