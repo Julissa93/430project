@@ -50,7 +50,7 @@
     </div>
     <div class = "section5">
       &nbsp;
-      <h3 class = 'text-center'>Submit Attendance
+      <h3 class = 'text-center'>Submit Grades
 
     </h3>
       <form class="form-horizontal" role="form">
@@ -154,17 +154,7 @@ function showAttendance()
   $('.section5').show();
 }
 </script>
-	  <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-   </body>
 
 
-
-
-
-
-
-
-
-    </html>
+</body>
+</html>
