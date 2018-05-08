@@ -4,6 +4,7 @@
    showHeader();
    ?>
 <body class = "dashboard-body">
+<div class = "container-fluid">
 <div class = "row d-flex align-items-center">
   <div class = "col-2">
      <div class="sidenav" style = "background-color: #3a4651">
@@ -63,8 +64,9 @@
   </div>
 <div class = "col-10">
   <div id = "display">
-    <iframe src="https://calendar.google.com/calendar/embed?src=julissa.napoletano%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    <ul class="widget-area" style = "float: right;">
+
+    <iframe class = "center" src="https://calendar.google.com/calendar/embed?src=julissa.napoletano%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="700" height="550" frameborder="0" scrolling="no" padding-top: "100px"; ></iframe>
+    <ul class="widget-area center" style = "float: right; ">
     <li class="widget">
          <h3 class="widget-title"><span class="widget-inner">News</span></h3>
 
@@ -92,6 +94,7 @@ Details: <a href="http://liquidbook.com/2014/08/adding-icon-wordpress-widget-tit
   </div>
 </div>
 
+</div>
 </div>
 <script>
    //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */

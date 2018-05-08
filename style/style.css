@@ -130,7 +130,7 @@ body.background_LogIn {
 
 /* dashboard css */
 .dashboard-body{
-  background-color: #edeff2;
+
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -161,7 +161,12 @@ ol, ul {
 max-width: 300px;
 }
 
-
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid green;
+    padding: 10px;
+}
 
 /*/About Us Style*/
 
