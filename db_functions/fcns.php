@@ -57,7 +57,7 @@ function showHeader() //shows header html tags so you only have to call function
         </style>-->
 
      </head>
-        <body>
+    
         ";
 }
 
@@ -72,7 +72,7 @@ function showFooter() //shows footer html tags so you only have to call function
 
 function loginForm($errorMessage) //echos login form
 {
-  showHeader(); 
+  showHeader();
      echo'
 
     <body class="background_LogIn">

@@ -3,6 +3,7 @@
    include('fcns.php');
    showHeader();
    ?>
+<body>
 <div class = "row d-flex align-items-center">
   <div class = "col-2">
      <div class="sidenav" style = "background-color: #3a4651">
