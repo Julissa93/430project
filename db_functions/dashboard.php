@@ -46,9 +46,9 @@
         </button>
         <div class="dropdown-container" >
            <a href="#aboutUs" id="aboutUs">About Us</a>
-           <a href="hoursOfOperation.html">Hours of Operation</a>
-           <a href="classInfo.html">This Semester</a>
-           <a href="contact_us.html">Contact Us</a>
+           <a href="#hours" id = "hours">Hours of Operation</a>
+           <a href="#semester" id = "semester">This Semester</a>
+           <a href="#contact" id = "contact">Contact Us</a>
         </div>
         <hr />
         <div class="container">
@@ -120,6 +120,24 @@
        $('#display').load("../html_files/aboutUs.html");
      });
    });
+
+   $(document).ready(function(){
+    $('#hours').click(function(){
+      $('#display').load("../html_files/hoursOfOperation.html");
+    });
+  });
+
+  $(document).ready(function(){
+   $('#semester').click(function(){
+     $('#display').load("../html_files/classInfo.html");
+   });
+ });
+
+ $(document).ready(function(){
+  $('#contact').click(function(){
+    $('#display').load("../html_files/contact_us.html");
+  });
+});
 
    $(document).ready(function(){
     $('#attendance').click(function(){
