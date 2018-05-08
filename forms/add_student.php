@@ -8,13 +8,13 @@ include('../db_functions/fcns.php');
 
       <head>
       <link href="https://cdn.materialdesignicons.com/2.1.99/css/materialdesignicons.min.css" rel="stylesheet" />
+      <div class = "container">
 
-         <div class="row align-items-center justify-content-center" style="margin-top:60px">
+         <div class="row align-items-center justify-content-center" style="">
 
-            <div class="col-lg-4 col-md-4 mx-auto">
-               <div class="card">
-                  <div class="card-body">
-                  <h3>Register Student</h3>
+            <div class="col-6 mx-auto">
+
+                  <h3 class = "text-center">Register Student</h3>
 
                     <form method = "post" action="../db_functions/addNewStudentSql.php">
 
@@ -58,10 +58,11 @@ include('../db_functions/fcns.php');
                         <button type="submit" class="btn btn-primary btn-block" name = 'submit' id = "submit">Submit</button>
 
                      </form>
-                  </div>
-               </div>
+
+
             </div>
          </div>
+       </div>
       </div>
 
     <?php showFooter(); ?>

@@ -1,13 +1,13 @@
 <?php
 include('../db_functions/fcns.php');
 ?>
-    
-         <div class="row align-items-center justify-content-center" style="margin-top:60px">
+<div class = "container">
+         <div class="row align-items-center justify-content-center" style="">
 
-            <div class="col-lg-4 col-md-4 mx-auto">
-               <div class="card">
-                  <div class="card-body">
-                  <h3>Register Employee</h3>
+            <div class="col-6 mx-auto">
+
+
+                  <h3 class = "text-center">Register Employee</h3>
 
                     <form method = "post" class="form-horizontal" role="form" action = "" id = "addPersonForm">
 
@@ -52,12 +52,12 @@ include('../db_functions/fcns.php');
                         <button type="submit" class="btn btn-primary btn-block" name = 'submit' id = "submit">Submit</button>
 
                      </form>
-                  </div>
-               </div>
+
+
             </div>
          </div>
       </div>
-
+</div>
     <?php showFooter(); ?>
    <script>
       function determineType(val) {

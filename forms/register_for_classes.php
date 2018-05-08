@@ -1,11 +1,10 @@
 <?php
 include('../db_functions/fcns.php');
 ?>
+<div class = "container">
+<div class="row align-items-center justify-content-center" >
+ <div class="col-6 mx-auto">
 
-<div class="row align-items-center justify-content-center" style="margin-top:60px">
- <div class="col-lg-4 col-md-4 mx-auto">
-    <div class="card">
-      <div class="card-body">
 
             <h3>Add Classes</h3>
             <div class = "result">
@@ -91,11 +90,11 @@ include('../db_functions/fcns.php');
 
               <button type="submit" name = "add_class" class="btn btn-primary form-control">Register</button>
             </form>
-          </div>
-        </div>
+
+
      </div>
     </div>
-
+</div>
 </div>
 
 
@@ -161,7 +160,7 @@ $('#myForm').submit(function(){
                     $("#notificationBox").show();
                 });
               }, 3000);
-              
+
             }
           });//end 2nd ajax
 
