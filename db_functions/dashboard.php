@@ -9,7 +9,11 @@
      <div class="sidenav" style = "background-color: #3a4651">
         <div class = "text-center text-primary"><i class="fas fa-graduation-cap fa-7x" ></i></div>
         &nbsp;
-        <?php echo "<h2 style = 'color: white; '> Hello, ".$_SESSION['valid_user']."</h2>"; ?>
+        <div class="container">
+              <?php echo "<h2 style = 'color: white; '> Hello, ".$_SESSION['valid_user']."</h2>"; ?>
+        </div>
+        <hr />
+
         <!-- EMPLOYEE SECTION SHOULD ONLY BE SEEN BY ADMINS-->
         <button class="dropdown-btn" >Employees
           <i class="fa fa-caret-down"></i>
@@ -46,8 +50,15 @@
            <a href="classInfo.html">This Semester</a>
            <a href="contact_us.html">Contact Us</a>
         </div>
-        <button type = "button" class = "btn btn-primary float-left"  ><i class="fas fa-sign-out-alt"></i> Sign Out</button><br><br>
-		  <button type = "button" class = "btn btn-primary float-left">Change Password</button>
+        <hr />
+        <div class="container">
+          <button type = "button" class = "btn btn-primary float-left"  ><i class="fas fa-sign-out-alt"></i> Sign Out</button><br><br>
+        </div>
+        <div class="container">
+          <button type = "button" class = "btn btn-primary float-left">Change Password</button>
+        </div>
+
+
      </div>
   </div>
 <div class = "col-10">
