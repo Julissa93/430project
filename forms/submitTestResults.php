@@ -106,7 +106,29 @@ $(document).ready(function(){
   $('.section5').hide();
 
   $( "#submit_grade" ).click(function() {
-  alert( "Grades submitted!" );
+    $.LoadingOverlay("show", {
+      image       : "",
+      background:"rgba(13, 13, 13, 0.8)",
+      fontawesomeColor        : "#f2f2f2",
+      fontawesomeAnimation: "1000ms rotate_right",
+      fontawesome : "fa fa-sync-alt ",
+      fontawesomeResizeFactor: 0.5,
+    });
+
+    setTimeout(function(){
+        $.LoadingOverlay("hide");
+    }, 1500);
+
+    setTimeout(function(){
+      $("#notificationBox").html("<div class='alert alert-success'><strong>Success! </strong>Grades were submitted!</div>");
+    }, 1600);
+
+    setTimeout(function(){
+      $("#notificationBox").fadeOut(2500, function(){
+          $("#notificationBox").html("");
+          $("#notificationBox").show();
+      });
+    }, 3000);
 });
 });
 
