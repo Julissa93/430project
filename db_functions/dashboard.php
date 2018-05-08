@@ -52,7 +52,7 @@
         </div>
         <hr />
         <div class="container">
-          <a href = '../430project/index.php' class = "btn btn-primary float-left"  ><i class="fas fa-sign-out-alt"></i> Sign Out</a><br><br>
+          <a href = '../index.php' class = "btn btn-primary float-left"  ><i class="fas fa-sign-out-alt"></i> Sign Out</a><br><br>
         </div>
         <!--<div class="container">
           <button type = "button" class = "btn btn-primary float-left">Change Password</button>
