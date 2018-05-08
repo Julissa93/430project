@@ -22,7 +22,6 @@
         <div class="dropdown-container">
            <a href="#addPerson" id = "addPerson">Add</a>
            <a href="#searchUsers" id = "searchUsers">Search</a>
-           <a href="#">Edit</a>
         </div>
 
         <!--STUDENT SECTION CAN BE SEEN BY ADMINS AND EMPLOYEES-->
