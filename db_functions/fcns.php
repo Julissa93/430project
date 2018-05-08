@@ -2,15 +2,15 @@
 function connect()
 {
 
-  $servername = "localhost";
+  /*$servername = "localhost";
   $username = "root";
   $password = "root";
-  $db = "tutoring_mgmt_sys";
+  $db = "tutoring_mgmt_sys";*/
 
-/*$servername = "us-cdbr-iron-east-05.cleardb.net";
+$servername = "us-cdbr-iron-east-05.cleardb.net";
   $username = "bb5158a7d2a4ed";
   $password = "eec665f8";
-  $db = "heroku_2178f16907ca82a";*/
+  $db = "heroku_2178f16907ca82a";
 
 
   $result = new mysqli($servername, $username, $password, $db);
@@ -57,7 +57,7 @@ function showHeader() //shows header html tags so you only have to call function
         </style>-->
 
      </head>
-    
+        <body>
         ";
 }
 
@@ -72,8 +72,15 @@ function showFooter() //shows footer html tags so you only have to call function
 
 function loginForm($errorMessage) //echos login form
 {
-  showHeader();
-     echo'
+     echo' <html>
+     <head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+     <link rel="stylesheet" href="style/style.css" type="text/css" />
+   </head>
 
     <body class="background_LogIn">
         <div class="container" style="margin-top:100px">
