@@ -3,7 +3,7 @@
    include('fcns.php');
    showHeader();
    ?>
-<body>
+<body class = "dashboard-body">
 <div class = "row d-flex align-items-center">
   <div class = "col-2">
      <div class="sidenav" style = "background-color: #3a4651">
@@ -63,8 +63,35 @@
   </div>
 <div class = "col-10">
   <div id = "display">
+    <iframe src="https://calendar.google.com/calendar/embed?src=julissa.napoletano%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <ul class="widget-area" style = "float: right;">
+    <li class="widget">
+         <h3 class="widget-title"><span class="widget-inner">News</span></h3>
+
+        <div class="widget-contents">Don't forget to submit all grading for all the classes you are teaching by the end of this week!</div>
+    </li>
+    <li class="widget">
+         <h3 class="widget-title"><span class="widget-inner">Tweets</span></h3>
+
+        <div class="widget-contents">Grades and attendance must be submitted correctly!</div>
+    </li>
+    <li class="widget">
+         <h3 class="widget-title"><span class="widget-inner">Resources</span></h3>
+
+        <div class="widget-contents"><a href = "#">How to Manage Time</a></div>
+        <div class="widget-contents"><a href = "#">Tutoring Resources</a></div>
+    </li>
+    <li class="widget">
+         <h3 class="widget-title"><span class="widget-inner">Contact Us</span></h3>
+
+      <div class="widget-contents">123 main streeet.</br>Anytown, USA 12345</br>1.555.123.4567 </br>
+Details: <a href="http://liquidbook.com/2014/08/adding-icon-wordpress-widget-title/" target="_blank">liquidbook.com</a>
+</div>
+    </li>
+</ul>
   </div>
 </div>
+
 </div>
 <script>
    //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
@@ -83,6 +110,31 @@
      });
    }
 
+   jQuery(document).ready(function ($) { //noconflict wrapper
+       var widget = {
+           news : "rss",
+           tweet : "twitter",
+           event : "calendar",
+           note : "pencil-square-o",
+           download : "download",
+           contact : "phone",
+           setIcon : function(icon) {
+               var myreturn;
+               Object.keys(this).forEach(function (key) {
+                   if(icon===key) {
+                       myreturn = '<i class="fa fa-' + widget[key] + ' fa-fw">&nbsp;</i>';
+                   }
+               });
+               return myreturn;
+           }
+       };
+
+       $('h3:contains("News")').append(widget.setIcon('news'));
+       $('.widget-title:contains("Tweets")').append(widget.setIcon('tweet'));
+       $('.widget-title:contains("Resources")').append(widget.setIcon('download'));
+       $('h3:contains("Contact")').append(widget.setIcon('contact'));
+
+   }); //end noconflict
 
    $(document).ready(function(){
        $("#searchUsers").click(function(){

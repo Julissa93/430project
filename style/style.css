@@ -128,6 +128,41 @@ body.background_LogIn {
           -o-background-size: cover;
           }
 
+/* dashboard css */
+.dashboard-body{
+  background-color: #edeff2;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {font-family: 'Open Sans', sans-serif;}
+.widget-title .fa {
+    float:right;
+  padding-top: 4px;
+}
+
+ul.widget-area {
+  padding: 20px;
+  margin:20px;
+  border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: 1px solid #DBDBDB;
+}
+.widget-title {
+  color:#1a6ca2;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 6px;
+}
+ol, ul {
+  list-style: none;
+}
+.widget-area {
+max-width: 300px;
+}
+
+
+
 /*/About Us Style*/
 
 /*div{border: 1px solid blue;}
