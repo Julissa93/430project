@@ -75,31 +75,60 @@
 
 }
 
-
-
-
-
+/* LoginIn*/
 .panel-heading {
-   padding: 5px 15px;
-font-family: American Typewriter, serif;
+    padding: 5px 15px;
+	font-family: American Typewriter, serif;
 }
 
 .panel-footer {
-   padding: 1px 15px;
-color: #A0A0A0;
-font-family: American Typewriter, serif;
+    padding: 1px 15px;
+	color: #A0A0A0;
+	font-family: American Typewriter, serif;
 }
 
 .logo {
-width: 250px;
-height: 100px;
-margin: 0 auto 10px;
-display: block;
+	width: 250px;
+	height: 100px;
+	margin: 0 auto 10px;
+	display: block;
 }
 
-body {
- background: url('http://sites.austincc.edu/npo/wp-content/uploads/sites/76/2013/04/Graduation-Background2-1080x675.jpg');
+body.background_LogIn {
+
+     background-image: url("../images/teacher.jpg");
+-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
+/* /LogIn*/
+
+
+
+/*About Us Style*/
+
+       body {
+          padding-top: 54px;
+        }
+
+        @media (min-width: 992px) {
+          body {
+            padding-top: 30px;
+
+          }
+        }
+
+        .bg-image-full {
+          background: no-repeat center center scroll;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+          -o-background-size: cover;
+          }
+
+/*/About Us Style*/
 
 /*div{border: 1px solid blue;}
 
