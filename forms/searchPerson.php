@@ -1,7 +1,7 @@
 <?php include('../db_functions/fcns.php'); ?>
 
 
-   <div class="container" style="background-color:white; margin-top:60px">
+   <div class="container" style="background-color:white;">
       <div class="row justify-content-center">
          <div class="col-6">
             <form action="" id = "theform" method="post">
