@@ -9,6 +9,12 @@
       <title>Submit Attendance</title>
    </head>
    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <footer class="bg-dark" >
+      <div class="container">
+        <p class="m-0 text-center text-white">Hope - 2018</p>
+      </div>
+       
+    </footer>
      <div class = "section1">
       <h3><label for="grade" class ="control-label">Please select a class to submit attendance: </label></h3>
       <select id = "grade" class="form-control" name="grade" onchange="reveal_options()">
