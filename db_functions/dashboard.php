@@ -1,22 +1,52 @@
 <?php
    session_start();
    include('fcns.php');
-   showHeader();
+ 
    ?>
+<!doctype html>
+  <html lang='en'>
+     <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+       
+         <!-- Bootstrap CSS -->
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.10/css/all.css' integrity='sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg' crossorigin='anonymous'>
+       
+         <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js' crossorigin='anonymous'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js'></script>
+        <script src='../scripts/jquery-loading-overlay-master/src/loadingoverlay.js'></script>
+    
+         <link rel = 'stylesheet' href = '../style/style.css'>
+
+        <!-- <style type='text/css'>
+        body {
+         background: url('https://images.pexels.com/photos/877695/pexels-photo-877695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+          -o-background-size: cover;
+        }
+
+        </style>-->
+         <title>Login</title>
+</head>
 <body class = "dashboard-body">
 <div class = "container-fluid">
-<div class = "row d-flex align-items-center">
-  <div class = "col-2">
-     <div class="sidenav" style = "background-color: #3a4651">
-        <div class = "text-center text-primary"><i class="fas fa-graduation-cap fa-7x" ></i></div>
-        &nbsp;
-        <div class="container">
-              <?php echo "<h2 style = 'color: white; '> Hello, ".$_SESSION['valid_user']."</h2>"; ?>
-        </div>
+ <div class="row">
+        <div class="col-2">
+            <div class="sidenav" style="background-color:#044652">
+                <div class = "text-center text-primary"><i class="fas fa-graduation-cap fa-7x" ></i></div>
+                &nbsp;
+                <?php echo "<h3 style = 'color: white; '> Hello, ".$_SESSION['valid_user']."</h2>"; ?>
         <hr />
 
         <!-- EMPLOYEE SECTION SHOULD ONLY BE SEEN BY ADMINS-->
-        <button class="dropdown-btn" >Employees
+        <button class="dropdown-btn" ><i class="fa fa-users" aria-hidden="true"></i> Employees
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
@@ -25,23 +55,23 @@
         </div>
 
         <!--STUDENT SECTION CAN BE SEEN BY ADMINS AND EMPLOYEES-->
-        <button class="dropdown-btn">Students
+        <button class="dropdown-btn"> <i class="fa fa-book" aria-hidden="true"></i> Students
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container" >
-           <a href="#registerStudent" id = "registerStudent">Add Student</a>
+           <a href="#registerStudent" id = "registerStudent"> Add Student</a>
            <a href="#addClass" id = "addClass">Add Class</a>
            <a href="#bills" id = "bills">Billing</a>
         </div>
 
-        <button class="dropdown-btn">Submit
+        <button class="dropdown-btn"><i class="fa fa-laptop" aria-hidden="true"></i> Submit
         <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container" >
            <a href="#attendance" id = "attendance">Attendance</a>
            <a href="#grades" id = "grades">Grades</a>
         </div>
-        <button class="dropdown-btn">Our Mission
+        <button class="dropdown-btn"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Our Mission
         <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container" >
@@ -52,17 +82,18 @@
         </div>
         <hr />
         <div class="container">
-          <button type = "button" class = "btn btn-primary" onclick="window.location.href='../index.php'" ><i class="fas fa-sign-out-alt"></i> Sign Out</button><br><br>
+          <button style="position: absolute; left: 20%; right: 20%; bottom: 2%;" type = "button" class = "btn btn-primary" onclick="window.location.href='../index.php'" ><i class="fas fa-sign-out-alt"></i> Sign Out</button><br><br>
         </div>
         <!--<div class="container">
           <button type = "button" class = "btn btn-primary float-left">Change Password</button>
         </div>-->
-
-
+            </div>
+            </div>
      </div>
   </div>
-<div class = "col-10">
-  <div id = "display">
+<div class="main" >
+ <div class = "col-12">
+      <div id = "display">
 
     <iframe class = "center" src="https://calendar.google.com/calendar/embed?src=julissa.napoletano%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="700" height="550" frameborder="0" scrolling="no" padding-top: "100px"; ></iframe>
     <ul class="widget-area center" style = "float: right; ">
@@ -98,22 +129,40 @@ Details: <a href="#" target="_blank">Hope.com</a>
 
 </div>
 </div>
+<div>
 <script>
-   //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-   var dropdown = document.getElementsByClassName("dropdown-btn");
-   var i;
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
 
-   for (i = 0; i < dropdown.length; i++) {
-     dropdown[i].addEventListener("click", function() {
-       this.classList.toggle("active");
-       var dropdownContent = this.nextElementSibling;
-       if (dropdownContent.style.display === "block") {
-         dropdownContent.style.display = "none";
-       } else {
-         dropdownContent.style.display = "block";
-       }
-     });
-   }
+    for (i = 0; i < dropdown.length; i++) {
+
+    dropdown[i].addEventListener("click", function () {
+
+    var containers = document.getElementsByClassName("dropdown-container");
+
+    for(var i=0; i<containers.length; i++){
+
+    containers[i].style.display = "none";
+
+    }
+
+    this.classList.toggle("active");
+
+    var dropdownContent = this.nextElementSibling;
+
+    if (dropdownContent.style.display === "block") {
+
+    dropdownContent.style.display = "none";
+
+    } else {
+
+    dropdownContent.style.display = "block";
+
+    }
+
+    });
+
+    }
 
    jQuery(document).ready(function ($) { //noconflict wrapper
        var widget = {
@@ -211,4 +260,5 @@ Details: <a href="#" target="_blank">Hope.com</a>
 
 
 </script>
-<?php showFooter();  ?>
+ </body>
+</html>
