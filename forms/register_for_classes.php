@@ -1,6 +1,13 @@
 <?php
 include('../db_functions/fcns.php');
 ?>
+
+<footer class="bg-dark" >
+      <div class="container">
+        <p class="m-0 text-center text-white">_</p>
+      </div>
+       
+    </footer>
 <div class="row">
  <div class="col-md-12">
     <div class="x_panel">
