@@ -1,18 +1,10 @@
 <?php
 include('../db_functions/fcns.php');
 ?>
-     <!doctype html>
-<html lang='en'>
-
-   <!------ Include the above in your HEAD tag ---------->
-
-      <head>
-      <link href="https://cdn.materialdesignicons.com/2.1.99/css/materialdesignicons.min.css" rel="stylesheet" />
-      <div class = "container">
-
-         <div class="row align-items-center justify-content-center" style="">
-
-            <div class="col-6 mx-auto">
+<div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+                 <div class="container" style="max-width:600px;padding:40px 20px;background:#ebeff2; "> 
 
                   <h3 class = "text-center">Register Student</h3>
 
