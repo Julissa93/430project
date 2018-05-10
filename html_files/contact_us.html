@@ -1,24 +1,58 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>
-         Contact Us
-      </title>
-   </head>
-   <body>
-      <h2>Contact Us</h2>
-      <h3>Give us a call at: <i>917-109-1212</i></h3>
-      <h3>
-      OR 
-      <h3>E-mail us:</h3>
-      <form action="mailto:hope.tutoring.management.system@gmail.com" method="post" enctype="text/plain">
-         Your Name:<br>
-         <input type="text" name="Name"><br>
-         Message:<br>
-         <textarea name="Message" rows="15" cols="55">
-         </textarea>
-         <br><br>
-         <input type="submit" value="Send Email" /> 
-      </form>
-   </body>
-</html>
+               
+<section class="section">
+
+    
+    <div class="container" style="max-width:600px;padding:40px 20px;background:#ebeff2; ">              <h2>Contact Us</h2>
+<form action="mailto:hope.tutoring.management.system@gmail.com" method="post" enctype="text/plain">
+    <div class="messages"></div>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_name">Name *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+         
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_phone">Phone</label>
+                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+               <br> <h4> You can also give us a call at: 917-109-1212</h4>
+                <p class="text-muted"><strong>*</strong> These fields are required.</p>
+            </div>
+        </div>
+    </div>
+
+</form>
+   
