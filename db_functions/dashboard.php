@@ -35,7 +35,7 @@
         </style>-->
          <title>Login</title>
 </head>
-<body class = "dashboard-body">
+<body class = "dashboard-body" >
 <div class = "container-fluid">
  <div class="row">
         <div class="col-2">
@@ -82,7 +82,7 @@
         </div>
         <hr />
         <div class="container">
-          <button style="position: absolute; left: 20%; right: 20%; bottom: 2%;" type = "button" class = "btn btn-primary" onclick="window.location.href='../index.php'" ><i class="fas fa-sign-out-alt"></i> Sign Out</button><br><br>
+          <button style="position: absolute; left: 20%; right: 20%; bottom: 2%;" type = "button" class = "btn btn-primary" onclick="window.location.href='logout.php'" ><i class="fas fa-sign-out-alt"></i> Sign Out</button><br><br>
         </div>
         <!--<div class="container">
           <button type = "button" class = "btn btn-primary float-left">Change Password</button>
@@ -91,7 +91,7 @@
             </div>
      </div>
   </div>
-<div class="main" >
+<div class="main">
  <div class = "col-12">
       <div id = "display">
 
