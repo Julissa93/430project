@@ -1,13 +1,11 @@
 <?php
 include('../db_functions/fcns.php');
 ?>
-<div class = "container">
-         <div class="row align-items-center justify-content-center" style="">
-
-            <div class="col-6 mx-auto">
-
-
-                  <h3 class = "text-center">Register Employee</h3>
+<div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+                 <div class="container" style="max-width:600px;padding:40px 20px;background:#ebeff2; "> 
+                  <h3>Register Employee</h3>
 
                     <form method = "post" class="form-horizontal" role="form" action = "" id = "addPersonForm">
 
