@@ -18,6 +18,7 @@ include('fcns.php');
     
     //converting the password to sha1
     $shaPassword= sha1($password);
+
     $sql = "insert into user (firstname, lastname, location, type, username, password) values (?, ?, ?, ?, ?, ?) ";
 
     $stmt = $conn->prepare($sql);
