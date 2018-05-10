@@ -43,6 +43,8 @@
                 <div class = "text-center text-primary"><i class="fas fa-graduation-cap fa-7x" ></i></div>
                 &nbsp;
                 <?php echo "<h3 style = 'color: white; '> Hello, ".$_SESSION['valid_user']."</h2>"; ?>
+           <small style="color:white">Manager</small>
+
         <hr />
 
         <!-- EMPLOYEE SECTION SHOULD ONLY BE SEEN BY ADMINS-->
@@ -90,46 +92,65 @@
             </div>
             </div>
      </div>
-  </div>
+</div>
+
 <div class="main">
  <div class = "col-12">
       <div id = "display">
+         <div class="row">
+            <div class="col-sm-7 my-7">
+                <div class="card">
+                                     
+                    <div class="card-body">
+                      <iframe class = "center" src="https://calendar.google.com/calendar/embed?src=julissa.napoletano%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="700" height="550" frameborder="0" scrolling="no" padding-top: "100px"; ></iframe>
 
-    <iframe class = "center" src="https://calendar.google.com/calendar/embed?src=julissa.napoletano%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="700" height="550" frameborder="0" scrolling="no" padding-top: "100px"; ></iframe>
-    <ul class="widget-area center" style = "float: right; ">
-    <li class="widget">
-         <h3 class="widget-title"><span class="widget-inner">News</span></h3>
+                    </div>
+                </div>
+            </div>
+   
+  <div class="col-sm-4 my-4">
+                <div class="card">
+                                     
+                    <div class="card-body">
+                      <ul class="widget-area center" style = "float: right; ">
+                        <li class="widget">
+                             <h3 class="widget-title"><span class="widget-inner">News</span></h3>
 
-        <div class="widget-contents">Don't forget to submit all grading for all the classes you are teaching by the end of this week!</div>
-    </li>
-    <li class="widget">
-         <h3 class="widget-title"><span class="widget-inner">Tweets</span></h3>
+                        <div class="widget-contents">Don't forget to submit all grading for all the classes you are teaching by the end of this week!</div>
+</li>
+                        <li class="widget">
+                             <h3 class="widget-title"><span class="widget-inner">Tweets</span></h3>
 
-        <div class="widget-contents">Grades and attendance must be submitted correctly!</div>
-    </li>
-    <li class="widget">
-         <h3 class="widget-title"><span class="widget-inner">Resources</span></h3>
+                            <div class="widget-contents">Grades and attendance must be submitted correctly!</div>
+                        </li>
+                        <li class="widget">
+                             <h3 class="widget-title"><span class="widget-inner">Resources</span></h3>
 
-        <div class="widget-contents"><a href = "#">How to Manage Time</a></div>
-        <div class="widget-contents"><a href = "#">Tutoring Resources</a></div>
-    </li>
-    <li class="widget">
-         <h3 class="widget-title"><span class="widget-inner">Contact Us</span></h3>
+                            <div class="widget-contents"><a href = "#">How to Manage Time</a></div>
+                            <div class="widget-contents"><a href = "#">Tutoring Resources</a></div>
+</li>
+                        <li class="widget">
+                             <h3 class="widget-title"><span class="widget-inner">Contact Us</span></h3>
 
-      <div class="widget-contents">H.O.P.E<br>
-2700 Sand Hill Rd<br>
-Menlo Park, CA 94025<br>
-<br>
-Details: <a href="#" target="_blank">Hope.com</a>
-</div>
-    </li>
-</ul>
+                          <div class="widget-contents">H.O.P.E<br>
+                            2700 Sand Hill Rd<br>
+                            Menlo Park, CA 94025<br>
+                           
+                            Details: <a href="#" target="_blank">Hope.com</a>
+                         </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+      
   </div>
+     </div>
 </div>
 
 </div>
-</div>
-<div>
+
 <script>
       var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
