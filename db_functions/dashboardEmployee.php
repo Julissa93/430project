@@ -41,7 +41,6 @@
         <div class="col-2">
             <div class="sidenav" style="background-color:#044652">
           
-              
               <img src="../images/hat.png" class="rounded mx-auto d-block" alt="HOPE" width="180" height="180" style="margin-top:30px;">
             
                 &nbsp;
