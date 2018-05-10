@@ -15,11 +15,13 @@ include('fcns.php');
     $username = htmlspecialchars($username);
     $password = trim($_POST['pin']);
     $password = htmlspecialchars($password);
-
+    
+    //converting the password to sha1
+    $shaPassword= sha1($password);
     $sql = "insert into user (firstname, lastname, location, type, username, password) values (?, ?, ?, ?, ?, ?) ";
 
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssss", $firstname, $lastname, $location, $usertype, $username, $password);
+    $stmt->bind_param("ssssss", $firstname, $lastname, $location, $usertype, $username, $shaPassword);
     $stmt->execute();
 
     if($stmt)
