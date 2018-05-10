@@ -1,5 +1,10 @@
 <?php include('../db_functions/fcns.php'); ?>
-
+<footer class="bg-dark" >
+      <div class="container">
+        <p class="m-0 text-center text-white">Hope - 2018</p>
+      </div>
+       
+    </footer>
 
    <div class="container" style="background-color:white;">
       <div class="row justify-content-center">
@@ -181,3 +186,4 @@ function edit_user()
 }
 
    </script>
+
