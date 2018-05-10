@@ -40,7 +40,10 @@
  <div class="row">
         <div class="col-2">
             <div class="sidenav" style="background-color:#044652">
-                <div class = "text-center text-primary"><i class="fas fa-graduation-cap fa-7x" ></i></div>
+          
+              
+              <img src="../images/hat.png" class="rounded mx-auto d-block" alt="HOPE" width="180" height="180" style="margin-top:30px;">
+            
                 &nbsp;
                 <?php echo "<h3 style = 'color: white; '> Hello, ".$_SESSION['valid_user']."</h2>"; ?>
                 <small style="color:white">Team Member</small>
