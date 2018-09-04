@@ -6,7 +6,7 @@
          <div class="col-6">
             <form action="" id = "theform" method="post">
               <div class = "form-group">
-                  <h3><label for="search" class ="control-label">Search By:</label></h3>
+                  <h3><label for="search" class ="control-label">Search Employee By:</label></h3>
                   <select id = "search" class="form-control" name="search_by" required>
                      <option style = "white-space: nowrap; ">Search By</option>
                      <option value="firstname">First Name</option>
