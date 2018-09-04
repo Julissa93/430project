@@ -1,67 +1,57 @@
 <?php
 include('../db_functions/fcns.php');
 ?>
-<footer class="bg-dark" >
-      <div class="container">
-        <p class="m-0 text-center text-white">Hope - 2018</p>
+
+<div class="row justify-content-center register">
+<div class="col-6">
+<h3 class = "text-center">Register Student</h3>
+  <form method = "post" action="../db_functions/addNewStudentSql.php">
+    <div class = "form-row">
+      <div class="form-group col-6">
+         <label for="first_name" class ="control-label">First Name<span class="text-danger">*</span></label>
+         <input name = "first_name" type="text" class="form-control" id="first_name" placeholder="Enter First Name" required>
       </div>
-       
-    </footer>
-<div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-                 <div class="container" style="max-width:600px;padding:40px 20px;background:#ebeff2; "> 
 
-                  <h3 class = "text-center">Register Student</h3>
-
-                    <form method = "post" action="../db_functions/addNewStudentSql.php">
-
-                        <div class="form-group">
-                           <label for="first_name" class ="control-label">First Name<span class="text-danger">*</span></label>
-                           <input name = "first_name" type="text" class="form-control" id="first_name" placeholder="Enter First Name" required>
-                        </div>
-
-                        <div class="form-group">
-                           <label for="last_name" class ="control-label">Last Name <span class="text-danger">*</span></label>
-                           <input name ="last_name" type="text" class="form-control" id="last_name" placeholder="Enter Last Name">
-                        </div>
-
-                        <div class="form-group">
-                           <label for="email" class ="control-label">Email <span class="text-danger">*</span></label>
-                           <input name ="email" type="email" class="form-control" id="email" placeholder="Email" required>
-                        </div>
-
-                        <div class="form-group">
-                           <label for="location" class ="control-label">Location <span class="text-danger">*</span></label>
-                           <select id = "location" class="form-control" name="location">
-                              <option value="location1">Location 1</option>
-                              <option value="location2">Location 2</option>
-                              <option value="location3">Location 3</option>
-                           </select>
-                        </div>
-
-                        <fieldset>
-                          <legend>Want the lunch package? </legend>
-                          <div>
-                             <input type="radio" id="wants_lunch" name="lunch" value="1">
-                             <label for="wants_lunch">YES</label>
-                          </div>
-                          <div>
-                             <input type="radio" id="wants_no_lunch" name="lunch" value="0">
-                             <label for="wants_no_lunch">NO</label>
-                          </div>
-                      </fieldset>
-
-
-                        <button type="submit" class="btn btn-primary btn-block" name = 'submit' id = "submit">Submit</button>
-
-                     </form>
-
-
-            </div>
-         </div>
-       </div>
+      <div class="form-group col-6">
+         <label for="last_name" class ="control-label">Last Name <span class="text-danger">*</span></label>
+         <input name ="last_name" type="text" class="form-control" id="last_name" placeholder="Enter Last Name" required>
       </div>
+    </div>
+
+      <div class="form-group">
+         <label for="email" class ="control-label">Email <span class="text-danger">*</span></label>
+         <input name ="email" type="email" class="form-control" id="email" placeholder="Email" required>
+      </div>
+
+      <div class="form-group">
+         <label for="location" class ="control-label">Location <span class="text-danger">*</span></label>
+         <select id = "location" class="form-control" name="location">
+            <option value="location1">Location 1</option>
+            <option value="location2">Location 2</option>
+            <option value="location3">Location 3</option>
+         </select>
+      </div>
+
+      <fieldset>
+        <legend>Want the lunch package? </legend>
+        <div>
+           <input type="radio" id="wants_lunch" name="lunch" value="1">
+           <label for="wants_lunch">Yes</label>
+        </div>
+        <div>
+           <input type="radio" id="wants_no_lunch" name="lunch" value="0">
+           <label for="wants_no_lunch">No</label>
+        </div>
+    </fieldset>
+
+
+      <button type="submit" class="btn btn-primary btn-block" name = 'submit' id = "submit">Submit</button>
+
+   </form>
+
+
+ </div>
+</div>
 
   <!-- We need to delete this code
 </html>

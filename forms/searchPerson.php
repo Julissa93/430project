@@ -1,12 +1,7 @@
 <?php include('../db_functions/fcns.php'); ?>
-<footer class="bg-dark" >
-      <div class="container">
-        <p class="m-0 text-center text-white">Hope - 2018</p>
-      </div>
-       
-    </footer>
 
-   <div class="container" style="background-color:white;">
+
+   <div class="container" >
       <div class="row justify-content-center">
          <div class="col-6">
             <form action="" id = "theform" method="post">
@@ -21,20 +16,23 @@
                      <option value = "type"> Employee Type</option>
                   </select>
                </div>
-               <div class="input-group">
+               <div class="form-group">
                   <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
                   <input type="text" class="form-control" id="search_user_id" name = "search" placeholder="Search" required>
-                  <span class="input-group-btn">
-                    <button type='submit' id = "searchButton" class='btn btn-primary' name = 'submit'> Submit</button>
 
-                  </span>
-               </div>
+                </div>
+                <div class = "form-group">
+                  <button type='submit' id = "searchButton" class='btn btn-primary btn-block' name = 'submit'> Submit</button>
+                </div>
+
+
+
             </form>
          </div>
 
       </div>
       <div class = "row justify-content-center">
-        <div class = "col-10">
+        <div class = "col-6">
           &nbsp;
                 <table class = 'table table-hover'>
                   <thead>
@@ -186,4 +184,3 @@ function edit_user()
 }
 
    </script>
-

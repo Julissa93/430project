@@ -20,34 +20,28 @@ else
       $password = trim($_POST['pw']);
       $password = htmlspecialchars($password);
 
-      $query = "select username,type from user where username= ? and password = sha1(?)";
+      $query = "select username,type from user where username = ? and password = sha1(?)";
 
       $stmt = $conn -> prepare($query);
       $stmt->bind_param('ss',$username,$password);
       $stmt->execute();
       $stmt->store_result();
       $stmt->bind_result($username,$type);
-          
-      while ( $stmt->fetch() )
-      {
-        echo "$username and $type ";
-      }
-      
+
       if ($stmt->num_rows > 0)
       {
       // if they are in the database register the user id
           session_start();
           $_SESSION['valid_user'] = $username;
-          //echo "Success betch!!!!!!!!!!!!sjlsdfgjlgsjblgf";
+          //echo "Success!!!!!!!!!!!!sjlsdfgjlgsjblgf";
          // $stmt->free_result();
           if($type=="admin" or $type=="manager"){
-        header('Location:db_functions/dashboard.php');
-
-          }else if ($type==="employee"){
+            header('Location:db_functions/dashboard.php');
+          }
+          else if ($type=="employee"){
             header('Location:db_functions/dashboardEmployee.php');
 
           }
-          echo $type;
 
       }
       else

@@ -2,15 +2,15 @@
 function connect()
 {
 
-  /*$servername = "localhost";
+  $servername = "localhost";
   $username = "root";
   $password = "root";
-  $db = "tutoring_mgmt_sys";*/
+  $db = "tutoring_mgmt_sys";
 
-  $servername = "us-cdbr-iron-east-05.cleardb.net";
+  /*$servername = "us-cdbr-iron-east-05.cleardb.net";
   $username = "bb5158a7d2a4ed";
   $password = "eec665f8";
-  $db = "heroku_2178f16907ca82a";
+  $db = "heroku_2178f16907ca82a";*/
 
 
   $result = new mysqli($servername, $username, $password, $db);
@@ -74,65 +74,50 @@ function loginForm($errorMessage) //echos login form
 {
      echo' <html>
      <head>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-     <link rel="stylesheet" href="style/style.css" type="text/css" />
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <!--font awesome-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
    </head>
 
-    <body class="background_LogIn">
-        <div class="container" style="margin-top:100px">
-    	<div class="row">
-			<div class="col-sm-6 col-md-4 col-md-offset-4">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-                        <h4><strong> Sign in to continue</strong></h4>
-					</div>
-					<div class="panel-body">
-						<form role="form" action="index.php" method="post">
-							<fieldset>
-								<div class="row">
-									<div class="center-block">
-										<img class="logo"src="images/logo.jpg" alt="">
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12 col-md-10  col-md-offset-1 ">
-										<div class="form-group">
-											<div class="input-group">
-												<span class="input-group-addon">
-													<i class="glyphicon glyphicon-user"></i>
-												</span>
-												<input class="form-control" placeholder="Username" id="user_id" name="username" type="text" required autofocus>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="input-group">
-												<span class="input-group-addon">
-													<i class="glyphicon glyphicon-lock"></i>
-												</span>
-												<input class="form-control" placeholder="Pin" name="pw" type="password" id ="pin" required value="">
-											</div>
-										</div>
-                                       <br>'.$errorMessage.'<br>
-                                           <div class="form-group">
-											<button type="submit" class="btn btn-lg btn-primary btn-block" name = "submit">Submit</button>
-										</div>
-									</div>
-								</div>
-							</fieldset>
-						</form>
-					</div>
-					<div class="panel-footer ">
-						<center>------------------<b>H</b>elping <b>O</b>ur <b>P</b>upils <b>E</b>xcel------------------</center>
-					</div>
-                </div>
-			</div>
-		</div>
-	</div>
-    </body>
+    <body class = "bg">
+      <div class="container-fluid" >
+      <div class = "row justify-content-center " style = "padding: 10%; ">
+      <div class = "card col-4 d-flex justify-content-center"  >
+    	 <div class=" form row justify-content-center">
+				<form role="form" action="index.php" method="post" class = "col-11">
+        <br>
+          <h4 class = "text-center">Sign In </h4>
+            '.$errorMessage.'
+						<div class="form-group">
+							<input class="form-control" placeholder="Username" id="user_id" name="username" type="text" required autofocus>
+						</div>
+						<div class="form-group">
+								<input class="form-control" placeholder="Password" name="pw" type="password" id ="pin" required value="">
+						</div>
+
+            <div class="form-group">
+							<button type="submit" class="btn btn-block btn-primary btn-block" name = "submit">Log In</button>
+						</div>
+          </form> <!-- end form -->
+				</div> <!--end row-->
+        </div> <!-- end card -->
+        </div> <!--end row2 -->
+			</div> <!-- end container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 
 </html>';
 }
